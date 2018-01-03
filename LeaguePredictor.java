@@ -1,34 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package leaguepredictor;
+import java.util.ArrayList;
 
-/**
- *
- * @author davidunderwood
- */
 public class LeaguePredictor {
 
 
-    public static void main(String[] args) {
-
-    String [] nineteen93 = {"Manchester United", "Aston Villa", "Norwich City",
-    "Blackburn Rovers", "QPR", "Liverpool", "Sheffield Wednesday", 
-    "Tottenham Hotspur", "Manchester City", "Arsesnal", "Chelsea", "Wimbledon",
-    "Everton", "Sheffield United", "Coventry City","Ipswich Town", 
-    "Leeds United", 
-    "Southampton", "Oldham Athletic", "Crystal Palace", "Middlesborough", 
-    "Nottingham Forest"};
-
-    String [] nineteen94 = {"Manchester United", 
-    "Blackburn Rovers", "Newcastle",
-    "Arsesnal", "Leeds United", "Wimbledon", "Sheffield Wednesday", "Liverpool", 
-    "QPR", "Aston Villa", "Coventry City", "Norwich City", "West Ham United", 
-    "Chelsea", "Tottenham Hotspur", "Manchester City", "Everton", "Southampton",
-    "Ipswich Town", "Sheffied United", "Oldham Athletic", "Swindon Town"};
-
+    public static void main (String[] args) {
+    NineteenNinetyThree yearOne = new NineteenNinetyThree();
+    ArrayList <String> yearOneTable = yearOne.createTable(); 
+   // yearOne.printTable(yearOneTable);
+    NineteenNinetyFour yearTwo = new NineteenNinetyFour();
+    ArrayList <String> yearTwoTable = yearTwo.createTable();
+    // yearTwo.printTable(yearTwoTable);
+    String [] promotedYearOne = yearOne.createPromoted();
+    ArrayList<String> yearOneReadyToCompare = yearOne.replaceRelegated(yearOneTable, promotedYearOne);
+    //yearOne.printTable(yearOneReadyToCompare);
+    yearOne.positionDifference(yearOneReadyToCompare, yearTwoTable);
+    }
+    /*
     String [] nineteen95 = {"Blackburn Rovers", 
     "Manchester United", "Nottingham Forest",
     "Liverpool", "Leeds United", "Newcastle United", "Tottenham Hotspur", "QPR", 
@@ -171,7 +158,7 @@ public class LeaguePredictor {
     "Tottenham Hotspur", "Everton", "Liverpool", "West Bromwich Albion",
     "Swansea City", "West Ham United", "Norwich City", "Fulham", "Stoke City",
     "Southampton", "Aston Villa", "Newcastle United", "Sunderland", 
-    "Wigan Athletic", "QPR"};
+    "Wigan Athletic", "Reading", "QPR"};
 
     String [] twenty14 = {"Manchester City", "Liverpool", "Chelsea", "Arsenal",
     "Everton", "Tottenham Hotspur", "Manchester United", "Southampton",
@@ -203,61 +190,13 @@ public class LeaguePredictor {
     nineteen97, nineteen98, nineteen99, twenty00, twenty01, twenty02, twenty03,
     twenty04, twenty05, twenty06, twenty07, twenty08, twenty09, twenty10,
     twenty11, twenty12, twenty13, twenty14, twenty15, twenty16, twenty17};
-    
-    int j = 0;
-    int b = 1993;
-    while(j < years.length){
-        int i = 0;
-        System.out.println(" ");
-        System.out.println(b);
-            while (i < years[j].length) {
-            System.out.println(years[j][i]);
-            i++;
-            }
-        b++;    
-        j++;
-        }
-    int z = 0;
-    int h = 1;
-    while (z < years.length){
-    j = 0;
-    b = 1993;
-    System.out.println(" ");
-    System.out.println(nineteen93[z]);
-        while (j < years.length){
-            int i = 0;
-            int k,l; 
-            while (i < years[j].length){
-                 if (nineteen93[z].equals(years[j][i])){
-                    k = i+1;
-                    l = h - k;
-                    h = k;
-                    System.out.print("position " +k);
-                    System.out.println ("  Year " +b);
-                    if (j != 0){
-                        System.out.println(l);
-                        }
-                    if (l == 0){
-                        System.out.println(" Same posistion as last year");
-                        }
-                    if (l < 0){
-                        System.out.println(" Team has moved down the league");
-                        System.out.print(java.lang.Math.abs(l));
-                        System.out.print("places");
-                        }
-                    if (l > 0){
-                        System.out.println("Team has moved up the league");
-                        System.out.println(l);
-                        System.out.print("places");
-                    }
-                    i++;
-                    }   
-                j++;    
-                b++;
-            }     
-            z++;
-        }
-    System.out.println(" ");
-    }     
-}
+ 
+    int countThroughYears = 0;
+    int countTH
+    		
+    while (countThroughYears < years.length){
+    	System.out.println("Team is: ", +years[countThroughYears][])
+    }
+  
+}*/
 }
