@@ -14,21 +14,24 @@ public class LeaguePredictor {
     ArrayList<String> yearOneReadyToCompare = yearOne.replaceRelegated(yearOneTable, promotedYearOne);
     //yearOne.printTable(yearOneReadyToCompare);
     yearOne.positionDifference(yearOneReadyToCompare, yearTwoTable);
+    System.out.println("");
+    NineteenNinetyFive yearThree = new NineteenNinetyFive();
+    ArrayList <String> yearThreeTable = yearThree.createTable();
+    String [] promotedYearTwo = yearTwo.createPromoted();
+    ArrayList<String> yearTwoReadyToCompare = yearTwo.replaceRelegated(yearTwoTable, promotedYearTwo);
+    yearTwo.positionDifference(yearTwoReadyToCompare, yearThreeTable);
+    System.out.println("");
+    NineteenNinetySix yearFour = new NineteenNinetySix();
+    ArrayList <String> yearFourTable = yearFour.createTable();
+    String [] promotedYearThree = yearThree.createPromoted();
+    ArrayList<String> yearThreeReadyToCompare = yearThree.replaceRelegated(yearThreeTable, promotedYearThree);
+    yearThree.positionDifference(yearThreeReadyToCompare, yearFourTable);
+    System.out.println("");
     }
     /*
-    String [] nineteen95 = {"Blackburn Rovers", 
-    "Manchester United", "Nottingham Forest",
-    "Liverpool", "Leeds United", "Newcastle United", "Tottenham Hotspur", "QPR", 
-    "Wimbledon", "Southampton", "Chelsea", "Arsenal", "Sheffield Wednesday", 
-    "West Ham United", "Everton", "Coventry City", 
-    "Manchester City", "Aston Villa",
-    "Crystal Palace", "Norwich City", "Leicester City", "Ipswich Town"};
 
-    String [] nineteen96 = {"Manchester United", "Newcastle United", "Liverpool",
-    "Aston Villa", "Arsenal", "Everton", "Blackburn Rovers", "Tottenham Hotspur",
-    "Nottingam Forest", "West Ham United", "Chelsea", "Middlesborough", 
-        "Leeds United", "Wimbledon", "Sheffield Wednesday", "Coventry City", 
-    "Southampton", "Manchester City", "QPR", "Bolton Wanderers"};
+
+   
 
     String [] nineteen97 = {"Manchester United", "Newcastle United", 
     "Arsenal", "Livepool",

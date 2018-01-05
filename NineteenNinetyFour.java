@@ -29,4 +29,21 @@ public class NineteenNinetyFour extends NineteenNinetyThree {
 		return nineteen94;
 		}
 	}
+	public String [] createPromoted(){
+		String[] promoted1993  = {"Crystal Palace", "Nottingham Forest", "Leicester City"};
+			return promoted1993;
+	}
+	public ArrayList<String> replaceRelegated(ArrayList<String>readyToCompareNextYear, String[]promoted){
+		readyToCompareNextYear.remove(21);
+		readyToCompareNextYear.remove(20);
+		int numberOfTeams = readyToCompareNextYear.size();
+		int numberOfPromoted = promoted.length;
+		numberOfTeams -= numberOfPromoted;
+		for(int i = 0; i < promoted.length; i++){
+			readyToCompareNextYear.set(numberOfTeams, promoted[i]);
+			numberOfTeams++;
+			}
+		return readyToCompareNextYear;
+		
+	}
 }
