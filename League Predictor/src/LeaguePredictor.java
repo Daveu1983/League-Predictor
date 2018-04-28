@@ -6,13 +6,13 @@ public class LeaguePredictor {
     public static void main (String[] args) {
     NineteenNinetyThree yearOne = new NineteenNinetyThree();
     ArrayList <String> yearOneTable = yearOne.createTable(); 
-   // yearOne.printTable(yearOneTable);
+    yearOne.printTable(yearOneTable);
     NineteenNinetyFour yearTwo = new NineteenNinetyFour();
     ArrayList <String> yearTwoTable = yearTwo.createTable();
-    // yearTwo.printTable(yearTwoTable);
+    yearTwo.printTable(yearTwoTable);
     String [] promotedYearOne = yearOne.createPromoted();
     ArrayList<String> yearOneReadyToCompare = yearOne.replaceRelegated(yearOneTable, promotedYearOne);
-    //yearOne.printTable(yearOneReadyToCompare);
+    yearOne.printTable(yearOneReadyToCompare);
     yearOne.positionDifference(yearOneReadyToCompare, yearTwoTable);
     System.out.println("");
     NineteenNinetyFive yearThree = new NineteenNinetyFive();
