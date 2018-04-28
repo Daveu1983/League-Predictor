@@ -12,7 +12,7 @@ public class LeaguePredictor {
    // yearTwo.printTable(yearTwoTable);
     String [] promotedYearOne = yearOne.createPromoted();
     ArrayList<String> yearOneReadyToCompare = yearOne.replaceRelegated(yearOneTable, promotedYearOne);
-    yearOne.printTable(yearOneReadyToCompare);
+   // yearOne.printTable(yearOneReadyToCompare);
     yearOne.positionDifference(yearOneReadyToCompare, yearTwoTable);
     System.out.println("");
     NineteenNinetyFive yearThree = new NineteenNinetyFive();
