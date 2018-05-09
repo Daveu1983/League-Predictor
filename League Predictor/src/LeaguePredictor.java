@@ -41,12 +41,7 @@ public class LeaguePredictor {
 
 
 
-    String [] nineteen98 = {"Arsenal", "Manchester United",
-    "Liverpool", "Chelsea", 
-    "Leeds United", "Blackburn Rovers", "Aston Villa", "West Ham United", 
-    "Derby County", "Leicester City", "Coventry City", "Southampton", 
-    "Newcastle United", "Tottenham Hotspur", "Wimbledon", "Sheffield Wednesday",
-    "Everton", "Bolton Wanderers", "Barnsley", "Crystal Palace"};
+
 
     String [] nineteen99 = {"Manchester United", 
     "Arsenal", "Chelsea", "Leeds United", 

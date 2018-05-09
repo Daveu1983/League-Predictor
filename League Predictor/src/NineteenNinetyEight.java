@@ -27,4 +27,7 @@ public class NineteenNinetyEight extends NineteenNinetyThree {
             return nineteen97;
         }
     }
+    public String [] createPromoted() {
+        String[] promoted1998 = {"Nottingham Forrest", "Middlesborough", "Charlton Athletic"};
+        return promoted1998;
 }
