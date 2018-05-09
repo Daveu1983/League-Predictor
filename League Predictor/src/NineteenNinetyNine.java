@@ -27,4 +27,8 @@ public class NineteenNinetyNine extends NineteenNinetyThree {
             return nineteen99;
         }
     }
+    public String[] createPromoted() {
+        String[] promoted1999 = {"Sunderland", "Bradford City", "Watford"};
+        return promoted1999;
+    }
 }

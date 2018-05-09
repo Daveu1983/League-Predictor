@@ -5,34 +5,49 @@ public class LeaguePredictor {
 
     public static void main (String[] args) {
     NineteenNinetyThree yearOne = new NineteenNinetyThree();
-    ArrayList <String> yearOneTable = yearOne.createTable(); 
-   // yearOne.printTable(yearOneTable);
+    ArrayList <String> yearOneTable = yearOne.createTable();
     NineteenNinetyFour yearTwo = new NineteenNinetyFour();
     ArrayList <String> yearTwoTable = yearTwo.createTable();
-   // yearTwo.printTable(yearTwoTable);
     String [] promotedYearOne = yearOne.createPromoted();
     ArrayList<String> yearOneReadyToCompare = yearOne.replaceRelegated(yearOneTable, promotedYearOne);
-   // yearOne.printTable(yearOneReadyToCompare);
     yearOne.positionDifference(yearOneReadyToCompare, yearTwoTable);
     System.out.println("");
+
     NineteenNinetyFive yearThree = new NineteenNinetyFive();
     ArrayList <String> yearThreeTable = yearThree.createTable();
     String [] promotedYearTwo = yearTwo.createPromoted();
     ArrayList<String> yearTwoReadyToCompare = yearTwo.replaceRelegated(yearTwoTable, promotedYearTwo);
     yearTwo.positionDifference(yearTwoReadyToCompare, yearThreeTable);
     System.out.println("");
+
     NineteenNinetySix yearFour = new NineteenNinetySix();
     ArrayList <String> yearFourTable = yearFour.createTable();
     String [] promotedYearThree = yearThree.createPromoted();
     ArrayList<String> yearThreeReadyToCompare = yearThree.replaceRelegated(yearThreeTable, promotedYearThree);
     yearThree.positionDifference(yearThreeReadyToCompare, yearFourTable);
     System.out.println("");
+
     NineteenNinetySeven yearFive = new NineteenNinetySeven();
     ArrayList <String> yearFiveTable = yearFive.createTable();
     String [] promotedYearFour = yearFour.createPromoted();
     ArrayList<String> yearFourReadyToCompare = yearFour.replaceRelegated(yearFourTable, promotedYearFour);
     yearFour.positionDifference(yearFourReadyToCompare, yearFiveTable);
     System.out.println("");
+
+    NineteenNinetyEight yearSix = new NineteenNinetyEight();
+    ArrayList <String> yearSixTable = yearSix.createTable();
+    String [] promotedYearFive = yearFive.createPromoted();
+    ArrayList<String> yearFiveReadyToCompare = yearFive.replaceRelegated(yearFiveTable, promotedYearFive);
+    yearFour.positionDifference(yearFiveReadyToCompare, yearSixTable);
+    System.out.println("");
+
+    NineteenNinetyNine yearSeven = new NineteenNinetyNine();
+    ArrayList <String> yearSevenTable = yearSeven.createTable();
+    String [] promotedYearSix = yearSix.createPromoted();
+    ArrayList<String> yearSixReadyToCompare = yearSix.replaceRelegated(yearSixTable, promotedYearSix);
+    yearFour.positionDifference(yearSixReadyToCompare, yearSevenTable);
+    System.out.println("");
+
     }
     /*
 
@@ -43,13 +58,7 @@ public class LeaguePredictor {
 
 
 
-    String [] nineteen99 = {"Manchester United", 
-    "Arsenal", "Chelsea", "Leeds United", 
-    "West Ham United", "Aston Villa", "Liverpool", 
-    "Derby County", "Middlesborough",
-    "Leicester City", "Tottenham Hotspur", "Sheffield Wednesday", 
-    "Newcastle United", "Everton", "Coventry City", "Wimbledon", "Southampton",
-    "Charlton Athletic", "Blackburn Rovers", "Nottingham Forest"};
+
 
     String [] twenty00 = {"Manchester United", "Arsenal", 
     "Leeds United", "Liverpool",
