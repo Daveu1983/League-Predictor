@@ -2,32 +2,34 @@ import java.util.ArrayList;
 
 public class NineteenNinetyEight extends NineteenNinetyThree {
     public ArrayList<String> createTable() {
-        ArrayList<String> nineteen97 = new ArrayList<String>();
+        ArrayList<String> nineteen98 = new ArrayList<String>();
         {
-            nineteen97.add("Arsenal");
-            nineteen97.add("Manchester United");
-            nineteen97.add("Liverpool");
-            nineteen97.add("Chelsea");
-            nineteen97.add("Leeds United");
-            nineteen97.add("Blackburn Rovers");
-            nineteen97.add("Aston Villa");
-            nineteen97.add("West Ham United");
-            nineteen97.add("Derby County");
-            nineteen97.add("Leicester City");
-            nineteen97.add("Coventry City");
-            nineteen97.add("Southampton");
-            nineteen97.add("Newcastle United");
-            nineteen97.add("Tottenham Hotspur");
-            nineteen97.add("Wimbledon");
-            nineteen97.add("Sheffield Wednesday");
-            nineteen97.add("Everton");
-            nineteen97.add("Bolton Wanderers");
-            nineteen97.add("Barnsley");
-            nineteen97.add("Crystal Palace");
-            return nineteen97;
+            nineteen98.add("Arsenal");
+            nineteen98.add("Manchester United");
+            nineteen98.add("Liverpool");
+            nineteen98.add("Chelsea");
+            nineteen98.add("Leeds United");
+            nineteen98.add("Blackburn Rovers");
+            nineteen98.add("Aston Villa");
+            nineteen98.add("West Ham United");
+            nineteen98.add("Derby County");
+            nineteen98.add("Leicester City");
+            nineteen98.add("Coventry City");
+            nineteen98.add("Southampton");
+            nineteen98.add("Newcastle United");
+            nineteen98.add("Tottenham Hotspur");
+            nineteen98.add("Wimbledon");
+            nineteen98.add("Sheffield Wednesday");
+            nineteen98.add("Everton");
+            nineteen98.add("Bolton Wanderers");
+            nineteen98.add("Barnsley");
+            nineteen98.add("Crystal Palace");
+            return nineteen98;
         }
     }
-    public String [] createPromoted() {
+
+    public String[] createPromoted() {
         String[] promoted1998 = {"Nottingham Forrest", "Middlesborough", "Charlton Athletic"};
         return promoted1998;
+    }
 }
