@@ -3,6 +3,14 @@ import java.util.ArrayList;
 public class LeaguePredictor {
 
 
+    public static final String MANCHESTER_UNITED = "Manchester United";
+    public static final String ARSESNAL = "Arsesnal";
+    public static final String ASTON_VILLA = "Aston Villa";
+    public static final String NEWCASTLE_UNITED = "Newcastle United";
+    public static final String CHELSEA = LeaguePredictor.CHELSEA;
+    public static final String LIVERPOOL = LeaguePredictor.LIVERPOOL;
+    public static final String BLACKBURN_ROVERS = LeaguePredictor.BLACKBURN_ROVERS;
+
     public static void main (String[] args) {
     NineteenNinetyThree yearOne = new NineteenNinetyThree();
     ArrayList <String> yearOneTable = yearOne.createTable();
@@ -69,6 +77,20 @@ public class LeaguePredictor {
     yearFour.positionDifference(yearNineReadyToCompare, yearTenTable);
     System.out.println("");
 
+    TwoThousandThree yearEleven = new TwoThousandThree();
+    ArrayList <String> yearElevenTable = yearEleven.createTable();
+    String [] promotedYearTen = yearTen.createPromoted();
+    ArrayList<String> yearTenReadyToCompare = yearTen.replaceRelegated(yearTenTable, promotedYearTen);
+    yearFour.positionDifference(yearTenReadyToCompare, yearElevenTable);
+    System.out.println("");
+
+    TwoThousandFour yearTwelve = new TwoThousandFour();
+    ArrayList <String> yearTwelveTable = yearTwelve.createTable();
+    String [] promotedYearEleven = yearEleven.createPromoted();
+    ArrayList<String> yearElevenReadyToCompare = yearEleven.replaceRelegated(yearTenTable, promotedYearEleven);
+    yearFour.positionDifference(yearElevenReadyToCompare, yearTwelveTable);
+    System.out.println("");
+
     }
     /*
 
@@ -79,111 +101,103 @@ public class LeaguePredictor {
 
 
 
-    String [] twenty03 = {"Manchester United", "Arsenal", "Newastle United",
-    "Chelsea",
-    "Liverpool", "Blackburn Rovers", "Everton", "Southampton",
-    "Manchester City", 
-    "Tottenham Hotspur", "Middlesborough", "Charlton Atheltic",
-    "Birmingam City",
-    "Fulham", "Leeds United", "Aston Villa", 
-    "Bolton Wanderers", "West Ham United",
-    "West Bromwich Albion", "Sunderland"};
 
-    String [] twenty04 = {"Arsenal", "Chelsea", "Manchester United", 
-    "Liverpool",
-    "Newcastle United", "Aston Villa", "Charlton Athletic", "Bolton Wanderers",
+
+    String [] twenty04 = {LeaguePredictor.ARSESNAL, LeaguePredictor.CHELSEA, LeaguePredictor.MANCHESTER_UNITED,
+    LeaguePredictor.LIVERPOOL,
+    LeaguePredictor.NEWCASTLE_UNITED, LeaguePredictor.ASTON_VILLA, "Charlton Athletic", "Bolton Wanderers",
     "Fulham", "Birmingham City", "Middlesborough", "Southampton", "Portsmouth",
-    "Tottenham Hotspur", "Blackburn Rovers", "Manhester City", "Everton", 
+    "Tottenham Hotspur", LeaguePredictor.BLACKBURN_ROVERS, "Manhester City", "Everton",
     "Leicester City", "Leeds United", "Wolverhampton Wanderers"};
 
-    String [] twenty05 = {"Chelsea", "Arsenal", "Manchester United", "Everton", 
-    "Liverpool", "Bolton Wanderers", "Middlesborough", "Manchester City",
-    "Tottenham Hotspur", "Aston Villa", "Charlton Athletic", "Birmingham City",
-    "Fulham", "Newcastle United", "Blakburn Rovers", "Portsmouth",
+    String [] twenty05 = {LeaguePredictor.CHELSEA, LeaguePredictor.ARSESNAL, LeaguePredictor.MANCHESTER_UNITED, "Everton",
+    LeaguePredictor.LIVERPOOL, "Bolton Wanderers", "Middlesborough", "Manchester City",
+    "Tottenham Hotspur", LeaguePredictor.ASTON_VILLA, "Charlton Athletic", "Birmingham City",
+    "Fulham", LeaguePredictor.NEWCASTLE_UNITED, "Blakburn Rovers", "Portsmouth",
     "West Bromwich Albion", "Crystal Palace", "Norwich City", "Southampton"};
 
-    String [] twenty06 = {"Chelsea", "Manchester United", 
-    "Liverpool", "Arsenal", 
-    "Tottenham Hotspur", "Blackburn Rovers", "Newcastle United", 
+    String [] twenty06 = {LeaguePredictor.CHELSEA, LeaguePredictor.MANCHESTER_UNITED,
+    LeaguePredictor.LIVERPOOL, LeaguePredictor.ARSESNAL,
+    "Tottenham Hotspur", LeaguePredictor.BLACKBURN_ROVERS, LeaguePredictor.NEWCASTLE_UNITED,
     "Bolton Wanderers", 
     "West Ham United", "Wigan Athletic", "Everton", 
     "Fulham", "Charlton Athletic", 
-    "Middlesborough", "Manchester City", "Aston Villa", "Portsmouth", 
+    "Middlesborough", "Manchester City", LeaguePredictor.ASTON_VILLA, "Portsmouth",
     "Birmingham City", "West Bromwich Albion", "Sunderland"};
 
-    String [] twenty07 = {"Manchester United", "Chelsea", 
-    "Liverpool", "Arsenal",
+    String [] twenty07 = {LeaguePredictor.MANCHESTER_UNITED, LeaguePredictor.CHELSEA,
+    LeaguePredictor.LIVERPOOL, LeaguePredictor.ARSESNAL,
     "Tottenham Hotspur", "Everton", "Bolton Wanderers", "Reading", "Portsmouth",
-    "Blackburn Rovers", "Aston Villa", "Middlesborough", "Newcastle United", 
+    LeaguePredictor.BLACKBURN_ROVERS, LeaguePredictor.ASTON_VILLA, "Middlesborough", LeaguePredictor.NEWCASTLE_UNITED,
     "Manchester City", "West Ham Unted", "Fulham", "Wigan Athletic", 
     "Sheffield United", "Charlton Athletic", "Watford"};
 
-    String [] twenty08 = {"Manchester United", "Chelsea", "Arsenal", "Liverpool", 
-    "Everton", "Aston Villa", "Blackburn Rovers", 
+    String [] twenty08 = {LeaguePredictor.MANCHESTER_UNITED, LeaguePredictor.CHELSEA, LeaguePredictor.ARSESNAL, LeaguePredictor.LIVERPOOL,
+    "Everton", LeaguePredictor.ASTON_VILLA, LeaguePredictor.BLACKBURN_ROVERS,
     "Portsmouth", "Manchester City",
-    "West Ham United", "Tottenham Hotspur", "Newcastle United", 
+    "West Ham United", "Tottenham Hotspur", LeaguePredictor.NEWCASTLE_UNITED,
     "Middlesborough", 
     "Wigan Athletic", "Sunderland", "Bolton Wanderers", "Fulham", "Reading", 
     "Birmingham City", "Derby County"};
 
-    String [] twenty09 = {"Manchester United", "Liverpool", "Chelsea", 
-    "Arsenal", 
-    "Everton", "Aston Villa", "Fulham", "Tottenham Hotspur", "West Ham United", 
+    String [] twenty09 = {LeaguePredictor.MANCHESTER_UNITED, LeaguePredictor.LIVERPOOL, LeaguePredictor.CHELSEA,
+    LeaguePredictor.ARSESNAL,
+    "Everton", LeaguePredictor.ASTON_VILLA, "Fulham", "Tottenham Hotspur", "West Ham United",
     "Manchester City", "Wigan Athletic", "Stoke City", "Bolton Wanderers",
-    "Portsmouth", "Blackburn Rovers", "Sunderland", 
-    "Hull City", "Newcastle United",
+    "Portsmouth", LeaguePredictor.BLACKBURN_ROVERS, "Sunderland",
+    "Hull City", LeaguePredictor.NEWCASTLE_UNITED,
     "Middlesborough", "West Bromwich Albion"};
 
-    String [] twenty10 = {"Chelsea", "Manchester United", "Arsenal", 
-    "Tottenham Hotspur", "Manchester City", "Aston Villa", "Liverpool", "Everton",
-    "Birmingham City", "Blackburn Rovers", 
+    String [] twenty10 = {LeaguePredictor.CHELSEA, LeaguePredictor.MANCHESTER_UNITED, LeaguePredictor.ARSESNAL,
+    "Tottenham Hotspur", "Manchester City", LeaguePredictor.ASTON_VILLA, LeaguePredictor.LIVERPOOL, "Everton",
+    "Birmingham City", LeaguePredictor.BLACKBURN_ROVERS,
     "Stoke City", "Fulham", "Sunderland",
     "Bolton Wanderers", "Wolverhampton Wanderers", "Wigan Athletic", 
     "West Ham United", "Burnley", "Hull City", "Portsmouth"};
 
-    String [] twenty11 = {"Manchester United", "Chelsea", "Manchester City",
-    "Arsenal", 
-    "Tottenham Hotspur", "Liverpool", "Everton", "Fulham", "Aston Villa", 
-    "Sunderland", "West Bromwich Albion", "Newcastle United", "Stoke City", 
-    "Bolton Wanderers", "Blackburn Rovers", "Wigan Athletic", 
+    String [] twenty11 = {LeaguePredictor.MANCHESTER_UNITED, LeaguePredictor.CHELSEA, "Manchester City",
+    LeaguePredictor.ARSESNAL,
+    "Tottenham Hotspur", LeaguePredictor.LIVERPOOL, "Everton", "Fulham", LeaguePredictor.ASTON_VILLA,
+    "Sunderland", "West Bromwich Albion", LeaguePredictor.NEWCASTLE_UNITED, "Stoke City",
+    "Bolton Wanderers", LeaguePredictor.BLACKBURN_ROVERS, "Wigan Athletic",
     "Wolverhampton Wanderers", "Birmingham City", "Blackpool", 
     "West Ham United"};
 
-    String [] twenty12 = {"Manchester City", "Manchester United", "Arsenal",
-    "Tottenham Hotspur", "Newcastle United", "Chelsea", "Everton", 
-    "Liverpool",
+    String [] twenty12 = {"Manchester City", LeaguePredictor.MANCHESTER_UNITED, LeaguePredictor.ARSESNAL,
+    "Tottenham Hotspur", LeaguePredictor.NEWCASTLE_UNITED, LeaguePredictor.CHELSEA, "Everton",
+    LeaguePredictor.LIVERPOOL,
     "Fulham", "West Bromwich Albion", "Swansea City", "Norwich City", "Sunderland",
-    "Stoke City", "Wigan Athletic", "Aston Villa", "QPR", "Bolton Wanderers",
-    "Blackburn Rovers", "Wolverhampton Wanderers"};
+    "Stoke City", "Wigan Athletic", LeaguePredictor.ASTON_VILLA, "QPR", "Bolton Wanderers",
+    LeaguePredictor.BLACKBURN_ROVERS, "Wolverhampton Wanderers"};
 
-    String [] twenty13 = {"Manchester United", "Manchester City", 
-    "Chelsea", "Arsenal", 
-    "Tottenham Hotspur", "Everton", "Liverpool", "West Bromwich Albion",
+    String [] twenty13 = {LeaguePredictor.MANCHESTER_UNITED, "Manchester City",
+    LeaguePredictor.CHELSEA, LeaguePredictor.ARSESNAL,
+    "Tottenham Hotspur", "Everton", LeaguePredictor.LIVERPOOL, "West Bromwich Albion",
     "Swansea City", "West Ham United", "Norwich City", "Fulham", "Stoke City",
-    "Southampton", "Aston Villa", "Newcastle United", "Sunderland", 
+    "Southampton", LeaguePredictor.ASTON_VILLA, LeaguePredictor.NEWCASTLE_UNITED, "Sunderland",
     "Wigan Athletic", "Reading", "QPR"};
 
-    String [] twenty14 = {"Manchester City", "Liverpool", "Chelsea", "Arsenal",
-    "Everton", "Tottenham Hotspur", "Manchester United", "Southampton",
-    "Stoke City", "Newcastle United", "Crystal Palace", "Swansea City",
-    "West Ham United", "Sunderland", "Aston Villa", "Hull City", 
+    String [] twenty14 = {"Manchester City", LeaguePredictor.LIVERPOOL, LeaguePredictor.CHELSEA, LeaguePredictor.ARSESNAL,
+    "Everton", "Tottenham Hotspur", LeaguePredictor.MANCHESTER_UNITED, "Southampton",
+    "Stoke City", LeaguePredictor.NEWCASTLE_UNITED, "Crystal Palace", "Swansea City",
+    "West Ham United", "Sunderland", LeaguePredictor.ASTON_VILLA, "Hull City",
     "West Bromwih Albion", "Norwich City", "Fulham", "Cardiff City"};
 
-    String [] twenty15 = {"Chelsea", "Manchester City", "Arsenal",
-    "Manchester United", "Tottenham Hotspur", "Liverpool", "Southampton", 
+    String [] twenty15 = {LeaguePredictor.CHELSEA, "Manchester City", LeaguePredictor.ARSESNAL,
+    LeaguePredictor.MANCHESTER_UNITED, "Tottenham Hotspur", LeaguePredictor.LIVERPOOL, "Southampton",
     "Swansea City", "Stoke City", 
     "Crystal Palace", "Everton", "West Ham United", 
-    "West Bromwich Albion", "Leicester City", "Newcastle United", "Sunderland",
-    "Aston Villa", "Hull City", "Burnley", "QPR"};
+    "West Bromwich Albion", "Leicester City", LeaguePredictor.NEWCASTLE_UNITED, "Sunderland",
+    LeaguePredictor.ASTON_VILLA, "Hull City", "Burnley", "QPR"};
 
-    String [] twenty16 = {"Leicester City", "Arsenal", "Tottenham Hotspur",
-    "Manchester City", "Manchester United", "Southampton", "West Ham United",
-    "Liverpool", "Stoke City", "Chelsea", "Everton", "Swansea City", "Watford",
+    String [] twenty16 = {"Leicester City", LeaguePredictor.ARSESNAL, "Tottenham Hotspur",
+    "Manchester City", LeaguePredictor.MANCHESTER_UNITED, "Southampton", "West Ham United",
+    LeaguePredictor.LIVERPOOL, "Stoke City", LeaguePredictor.CHELSEA, "Everton", "Swansea City", "Watford",
     "West Bromwich Albion", "Crystal Palace", "AFC Bournemouth", "Sunderland",
-    "Newcastle United", "Norwich City", "Aston Villa"};
+    LeaguePredictor.NEWCASTLE_UNITED, "Norwich City", LeaguePredictor.ASTON_VILLA};
 
-    String  [] twenty17 = {"Chelsea", "Tottenham Hotspur", "Manchester City",
-    "Liverpool", "Arsenal", "Manchester United", "Everton", "Southampton",
+    String  [] twenty17 = {LeaguePredictor.CHELSEA, "Tottenham Hotspur", "Manchester City",
+    LeaguePredictor.LIVERPOOL, LeaguePredictor.ARSESNAL, LeaguePredictor.MANCHESTER_UNITED, "Everton", "Southampton",
     "AFC Bournemouth", "West Bromwich Albion",
     "West Ham United", "Leicester City",
     "Stoke City", "Crystal Palace", "Swansea City", "Burnley", "Watford", 

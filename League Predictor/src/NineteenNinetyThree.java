@@ -1,22 +1,22 @@
 import java.util.ArrayList;
 
 public class NineteenNinetyThree {
-	
+
 	public ArrayList<String> createTable() {
 	 
 	ArrayList<String> nineteen93 = new ArrayList<String>(); {  
 	    
-	    nineteen93.add("Manchester United"); 
-	    nineteen93.add("Aston Villa");
+	    nineteen93.add(LeaguePredictor.MANCHESTER_UNITED);
+	    nineteen93.add(LeaguePredictor.ASTON_VILLA);
 	    nineteen93.add("Norwich City");
-	    nineteen93.add("Blackburn Rovers"); 
+	    nineteen93.add(LeaguePredictor.BLACKBURN_ROVERS);
 	    nineteen93.add("QPR");
-	    nineteen93.add("Liverpool"); 
+	    nineteen93.add(LeaguePredictor.LIVERPOOL);
 	    nineteen93.add("Sheffield Wednesday");
 	    nineteen93.add("Tottenham Hotspur");
 	    nineteen93.add("Manchester City");
-	    nineteen93.add("Arsesnal");
-	    nineteen93.add("Chelsea");
+	    nineteen93.add(LeaguePredictor.ARSESNAL);
+	    nineteen93.add(LeaguePredictor.CHELSEA);
 	    nineteen93.add("Wimbledon");
 	    nineteen93.add("Everton"); 
 	    nineteen93.add("Sheffield United");
@@ -38,7 +38,7 @@ public class NineteenNinetyThree {
 	}
 	
 	public String [] createPromoted(){
-		String[] promoted1993  = {"NewCastle United", "West Ham United", "Swindon Town"};
+		String[] promoted1993  = {LeaguePredictor.NEWCASTLE_UNITED, "West Ham United", "Swindon Town"};
 			return promoted1993;
 		
 	}

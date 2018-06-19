@@ -4,16 +4,16 @@ public class TwoThousandTwo extends NineteenNinetyThree {
     public ArrayList<String> createTable() {
         ArrayList<String> twoThousand02 = new ArrayList<String>();
         {
-            twoThousand02.add("Arsenal");
-            twoThousand02.add("Liverpool");
-            twoThousand02.add("Manchester United");
-            twoThousand02.add("Newcastle United");
+            twoThousand02.add(LeaguePredictor.ARSESNAL);
+            twoThousand02.add(LeaguePredictor.LIVERPOOL);
+            twoThousand02.add(LeaguePredictor.MANCHESTER_UNITED);
+            twoThousand02.add(LeaguePredictor.NEWCASTLE_UNITED);
             twoThousand02.add("Leeds United");
-            twoThousand02.add("Chelsea");
+            twoThousand02.add(LeaguePredictor.CHELSEA);
             twoThousand02.add("West Ham United");
-            twoThousand02.add("Aston Villa");
+            twoThousand02.add(LeaguePredictor.ASTON_VILLA);
             twoThousand02.add("Tottenham Hotspur");
-            twoThousand02.add("Blackburn Rovers");
+            twoThousand02.add(LeaguePredictor.BLACKBURN_ROVERS);
             twoThousand02.add("Southampton");
             twoThousand02.add("Middlesborough");
             twoThousand02.add("Fulham");
