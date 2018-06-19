@@ -58,8 +58,15 @@ public class LeaguePredictor {
     TwoThousandOne yearNine = new TwoThousandOne();
     ArrayList <String> yearNineTable = yearNine.createTable();
     String [] promotedYearEight = yearEight.createPromoted();
-    ArrayList<String> yearEightReadyToCompare = yearEight.replaceRelegated(yearSevenTable, promotedYearEight);
+    ArrayList<String> yearEightReadyToCompare = yearEight.replaceRelegated(yearEightTable, promotedYearEight);
     yearFour.positionDifference(yearEightReadyToCompare, yearNineTable);
+    System.out.println("");
+
+    TwoThousandTwo yearTen = new TwoThousandTwo();
+    ArrayList <String> yearTenTable = yearTen.createTable();
+    String [] promotedYearNine = yearNine.createPromoted();
+    ArrayList<String> yearNineReadyToCompare = yearNine.replaceRelegated(yearNineTable, promotedYearNine);
+    yearFour.positionDifference(yearNineReadyToCompare, yearTenTable);
     System.out.println("");
 
     }
@@ -70,12 +77,7 @@ public class LeaguePredictor {
 
 
 
-    String [] twenty02 = {"Arsenal", "Liverpool", "Manchester United", 
-    "Newcastle United", "Leeds United", "Chelsea", 
-    "West Ham United", "Aston Villa",
-    "Tottenham Hotspur", "Blackburn Rovers", "Southampton", "Middlesborough", 
-    "Fulham", "Charlton Athletic", "Everton", "Bolton Wanderers", "Sunderland", 
-    "Ipswich Town", "Derby County", "Leicester City"};
+
 
     String [] twenty03 = {"Manchester United", "Arsenal", "Newastle United",
     "Chelsea",
