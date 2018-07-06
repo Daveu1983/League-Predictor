@@ -7,9 +7,9 @@ public class LeaguePredictor {
     public static final String ARSESNAL = "Arsesnal";
     public static final String ASTON_VILLA = "Aston Villa";
     public static final String NEWCASTLE_UNITED = "Newcastle United";
-    public static final String CHELSEA = LeaguePredictor.CHELSEA;
-    public static final String LIVERPOOL = LeaguePredictor.LIVERPOOL;
-    public static final String BLACKBURN_ROVERS = LeaguePredictor.BLACKBURN_ROVERS;
+    public static final String CHELSEA = "Chelsea";
+    public static final String LIVERPOOL = "Liverpool";
+    public static final String BLACKBURN_ROVERS ="Blackburn Rovers";
 
     public static void main (String[] args) {
     NineteenNinetyThree yearOne = new NineteenNinetyThree();
@@ -87,101 +87,86 @@ public class LeaguePredictor {
     TwoThousandFour yearTwelve = new TwoThousandFour();
     ArrayList <String> yearTwelveTable = yearTwelve.createTable();
     String [] promotedYearEleven = yearEleven.createPromoted();
-    ArrayList<String> yearElevenReadyToCompare = yearEleven.replaceRelegated(yearTenTable, promotedYearEleven);
+    ArrayList<String> yearElevenReadyToCompare = yearEleven.replaceRelegated(yearElevenTable, promotedYearEleven);
     yearFour.positionDifference(yearElevenReadyToCompare, yearTwelveTable);
     System.out.println("");
 
+    TwoThousandFive yearThirteen = new TwoThousandFive();
+    ArrayList <String> yearThirteenTable = yearThirteen.createTable();
+    String [] promotedYearTwelve = yearTwelve.createPromoted();
+    ArrayList<String> yearTwelveReadyToCompare = yearTwelve.replaceRelegated(yearTwelveTable, promotedYearTwelve);
+    yearFour.positionDifference(yearTwelveReadyToCompare, yearThirteenTable);
+    System.out.println("");
+
+    TwoThousandSix yearFourteen = new TwoThousandSix();
+    ArrayList <String> yearFourteenTable = yearFourteen.createTable();
+    String [] promotedYearThirteen = yearThirteen.createPromoted();
+    ArrayList<String> yearThirteenReadyToCompare = yearThirteen.replaceRelegated(yearThirteenTable, promotedYearThirteen);
+    yearFour.positionDifference(yearThirteenReadyToCompare, yearFourteenTable);
+    System.out.println("");
+
+    TwoThousandSeven yearFifteen = new TwoThousandSeven();
+    ArrayList <String> yearFifteenTable = yearFifteen.createTable();
+    String [] promotedYearFourteen = yearFourteen.createPromoted();
+    ArrayList<String> yearFourteenReadyToCompare = yearFourteen.replaceRelegated(yearFourteenTable, promotedYearFourteen);
+    yearFour.positionDifference(yearFourteenReadyToCompare, yearFifteenTable);
+    System.out.println("");
+
+    TwoThousandEight yearSixteen = new TwoThousandEight();
+    ArrayList <String> yearSixteenTable = yearSixteen.createTable();
+    String [] promotedYearFifteen = yearFifteen.createPromoted();
+    ArrayList<String> yearFifteenReadyToCompare = yearFifteen.replaceRelegated(yearFifteenTable, promotedYearFifteen);
+    yearFour.positionDifference(yearFifteenReadyToCompare, yearSixteenTable);
+    System.out.println("");
+
+    TwoThousandNine yearSeventeen = new TwoThousandNine();
+    ArrayList <String> yearSeventeenTable = yearSeventeen.createTable();
+    String [] promotedYearSixteen = yearSixteen.createPromoted();
+    ArrayList<String> yearSixteenReadyToCompare = yearSixteen.replaceRelegated(yearSixteenTable, promotedYearSixteen);
+    yearFour.positionDifference(yearSixteenReadyToCompare, yearSeventeenTable);
+    System.out.println("");
+
+    TwoThousandTen yearEighteen = new TwoThousandTen();
+    ArrayList <String> yearEighteenTable = yearEighteen.createTable();
+    String [] promotedYearSeventeen = yearSeventeen.createPromoted();
+    ArrayList<String> yearSeventeenReadyToCompare = yearSeventeen.replaceRelegated(yearSeventeenTable, promotedYearSeventeen);
+    yearFour.positionDifference(yearSeventeenReadyToCompare, yearEighteenTable);
+    System.out.println("");
+
+    TwoThousandEleven yearNineteen = new TwoThousandEleven();
+    ArrayList <String> yearNineteenTable = yearNineteen.createTable();
+    String [] promotedYearEighteen = yearEighteen.createPromoted();
+    ArrayList<String> yearEighteenReadyToCompare = yearEighteen.replaceRelegated(yearEighteenTable, promotedYearEighteen);
+    yearFour.positionDifference(yearEighteenReadyToCompare, yearNineteenTable);
+    System.out.println("");
+
+    TwoThousandTwelve yearTwenty = new TwoThousandTwelve();
+    ArrayList <String> yearTwentyTable = yearTwenty.createTable();
+    String [] promotedYearNineteen = yearNineteen.createPromoted();
+    ArrayList<String> yearNineteenReadyToCompare = yearNineteen.replaceRelegated(yearNineteenTable, promotedYearNineteen);
+    yearFour.positionDifference(yearNineteenReadyToCompare, yearTwentyTable);
+    System.out.println("");
+
+    TwoThousandThirteen yearTwentyOne = new TwoThousandThirteen();
+    ArrayList <String> yearTwentyOneTable = yearTwentyOne.createTable();
+    String [] promotedYearTwenty = yearTwenty.createPromoted();
+    ArrayList<String> yearTwentyReadyToCompare = yearTwenty.replaceRelegated(yearTwentyTable, promotedYearTwenty);
+    yearFour.positionDifference(yearTwentyReadyToCompare, yearTwentyOneTable);
+    System.out.println("");
+
+    TwoThousandFourteen yearTwentyTwo = new TwoThousandFourteen();
+    ArrayList <String> yearTwentyTwoTable = yearTwentyTwo.createTable();
+    String [] promotedYearTwentyOne = yearTwentyOne.createPromoted();
+    ArrayList<String> yearTwentyOneReadyToCompare = yearTwentyOne.replaceRelegated(yearTwentyOneTable, promotedYearTwentyOne);
+    yearFour.positionDifference(yearTwentyOneReadyToCompare, yearTwentyTwoTable);
+    System.out.println("");
+
     }
+
+
+
     /*
 
-
-   
-
-
-
-
-
-
-
-    String [] twenty04 = {LeaguePredictor.ARSESNAL, LeaguePredictor.CHELSEA, LeaguePredictor.MANCHESTER_UNITED,
-    LeaguePredictor.LIVERPOOL,
-    LeaguePredictor.NEWCASTLE_UNITED, LeaguePredictor.ASTON_VILLA, "Charlton Athletic", "Bolton Wanderers",
-    "Fulham", "Birmingham City", "Middlesborough", "Southampton", "Portsmouth",
-    "Tottenham Hotspur", LeaguePredictor.BLACKBURN_ROVERS, "Manhester City", "Everton",
-    "Leicester City", "Leeds United", "Wolverhampton Wanderers"};
-
-    String [] twenty05 = {LeaguePredictor.CHELSEA, LeaguePredictor.ARSESNAL, LeaguePredictor.MANCHESTER_UNITED, "Everton",
-    LeaguePredictor.LIVERPOOL, "Bolton Wanderers", "Middlesborough", "Manchester City",
-    "Tottenham Hotspur", LeaguePredictor.ASTON_VILLA, "Charlton Athletic", "Birmingham City",
-    "Fulham", LeaguePredictor.NEWCASTLE_UNITED, "Blakburn Rovers", "Portsmouth",
-    "West Bromwich Albion", "Crystal Palace", "Norwich City", "Southampton"};
-
-    String [] twenty06 = {LeaguePredictor.CHELSEA, LeaguePredictor.MANCHESTER_UNITED,
-    LeaguePredictor.LIVERPOOL, LeaguePredictor.ARSESNAL,
-    "Tottenham Hotspur", LeaguePredictor.BLACKBURN_ROVERS, LeaguePredictor.NEWCASTLE_UNITED,
-    "Bolton Wanderers", 
-    "West Ham United", "Wigan Athletic", "Everton", 
-    "Fulham", "Charlton Athletic", 
-    "Middlesborough", "Manchester City", LeaguePredictor.ASTON_VILLA, "Portsmouth",
-    "Birmingham City", "West Bromwich Albion", "Sunderland"};
-
-    String [] twenty07 = {LeaguePredictor.MANCHESTER_UNITED, LeaguePredictor.CHELSEA,
-    LeaguePredictor.LIVERPOOL, LeaguePredictor.ARSESNAL,
-    "Tottenham Hotspur", "Everton", "Bolton Wanderers", "Reading", "Portsmouth",
-    LeaguePredictor.BLACKBURN_ROVERS, LeaguePredictor.ASTON_VILLA, "Middlesborough", LeaguePredictor.NEWCASTLE_UNITED,
-    "Manchester City", "West Ham Unted", "Fulham", "Wigan Athletic", 
-    "Sheffield United", "Charlton Athletic", "Watford"};
-
-    String [] twenty08 = {LeaguePredictor.MANCHESTER_UNITED, LeaguePredictor.CHELSEA, LeaguePredictor.ARSESNAL, LeaguePredictor.LIVERPOOL,
-    "Everton", LeaguePredictor.ASTON_VILLA, LeaguePredictor.BLACKBURN_ROVERS,
-    "Portsmouth", "Manchester City",
-    "West Ham United", "Tottenham Hotspur", LeaguePredictor.NEWCASTLE_UNITED,
-    "Middlesborough", 
-    "Wigan Athletic", "Sunderland", "Bolton Wanderers", "Fulham", "Reading", 
-    "Birmingham City", "Derby County"};
-
-    String [] twenty09 = {LeaguePredictor.MANCHESTER_UNITED, LeaguePredictor.LIVERPOOL, LeaguePredictor.CHELSEA,
-    LeaguePredictor.ARSESNAL,
-    "Everton", LeaguePredictor.ASTON_VILLA, "Fulham", "Tottenham Hotspur", "West Ham United",
-    "Manchester City", "Wigan Athletic", "Stoke City", "Bolton Wanderers",
-    "Portsmouth", LeaguePredictor.BLACKBURN_ROVERS, "Sunderland",
-    "Hull City", LeaguePredictor.NEWCASTLE_UNITED,
-    "Middlesborough", "West Bromwich Albion"};
-
-    String [] twenty10 = {LeaguePredictor.CHELSEA, LeaguePredictor.MANCHESTER_UNITED, LeaguePredictor.ARSESNAL,
-    "Tottenham Hotspur", "Manchester City", LeaguePredictor.ASTON_VILLA, LeaguePredictor.LIVERPOOL, "Everton",
-    "Birmingham City", LeaguePredictor.BLACKBURN_ROVERS,
-    "Stoke City", "Fulham", "Sunderland",
-    "Bolton Wanderers", "Wolverhampton Wanderers", "Wigan Athletic", 
-    "West Ham United", "Burnley", "Hull City", "Portsmouth"};
-
-    String [] twenty11 = {LeaguePredictor.MANCHESTER_UNITED, LeaguePredictor.CHELSEA, "Manchester City",
-    LeaguePredictor.ARSESNAL,
-    "Tottenham Hotspur", LeaguePredictor.LIVERPOOL, "Everton", "Fulham", LeaguePredictor.ASTON_VILLA,
-    "Sunderland", "West Bromwich Albion", LeaguePredictor.NEWCASTLE_UNITED, "Stoke City",
-    "Bolton Wanderers", LeaguePredictor.BLACKBURN_ROVERS, "Wigan Athletic",
-    "Wolverhampton Wanderers", "Birmingham City", "Blackpool", 
-    "West Ham United"};
-
-    String [] twenty12 = {"Manchester City", LeaguePredictor.MANCHESTER_UNITED, LeaguePredictor.ARSESNAL,
-    "Tottenham Hotspur", LeaguePredictor.NEWCASTLE_UNITED, LeaguePredictor.CHELSEA, "Everton",
-    LeaguePredictor.LIVERPOOL,
-    "Fulham", "West Bromwich Albion", "Swansea City", "Norwich City", "Sunderland",
-    "Stoke City", "Wigan Athletic", LeaguePredictor.ASTON_VILLA, "QPR", "Bolton Wanderers",
-    LeaguePredictor.BLACKBURN_ROVERS, "Wolverhampton Wanderers"};
-
-    String [] twenty13 = {LeaguePredictor.MANCHESTER_UNITED, "Manchester City",
-    LeaguePredictor.CHELSEA, LeaguePredictor.ARSESNAL,
-    "Tottenham Hotspur", "Everton", LeaguePredictor.LIVERPOOL, "West Bromwich Albion",
-    "Swansea City", "West Ham United", "Norwich City", "Fulham", "Stoke City",
-    "Southampton", LeaguePredictor.ASTON_VILLA, LeaguePredictor.NEWCASTLE_UNITED, "Sunderland",
-    "Wigan Athletic", "Reading", "QPR"};
-
-    String [] twenty14 = {"Manchester City", LeaguePredictor.LIVERPOOL, LeaguePredictor.CHELSEA, LeaguePredictor.ARSESNAL,
-    "Everton", "Tottenham Hotspur", LeaguePredictor.MANCHESTER_UNITED, "Southampton",
-    "Stoke City", LeaguePredictor.NEWCASTLE_UNITED, "Crystal Palace", "Swansea City",
-    "West Ham United", "Sunderland", LeaguePredictor.ASTON_VILLA, "Hull City",
-    "West Bromwih Albion", "Norwich City", "Fulham", "Cardiff City"};
 
     String [] twenty15 = {LeaguePredictor.CHELSEA, "Manchester City", LeaguePredictor.ARSESNAL,
     LeaguePredictor.MANCHESTER_UNITED, "Tottenham Hotspur", LeaguePredictor.LIVERPOOL, "Southampton",
@@ -202,17 +187,7 @@ public class LeaguePredictor {
     "West Ham United", "Leicester City",
     "Stoke City", "Crystal Palace", "Swansea City", "Burnley", "Watford", 
     "Hull City", "Middlesborough", "Sunderland"};
-    
-    String [][] years = {nineteen93, nineteen94, nineteen95, nineteen96,
-    nineteen97, nineteen98, nineteen99, twenty00, twenty01, twenty02, twenty03,
-    twenty04, twenty05, twenty06, twenty07, twenty08, twenty09, twenty10,
-    twenty11, twenty12, twenty13, twenty14, twenty15, twenty16, twenty17};
- 
-    int countThroughYears = 0;
-    int countTH
-    		
-    while (countThroughYears < years.length){
-    	System.out.println("Team is: ", +years[countThroughYears][])
+
     }
   
 }*/
