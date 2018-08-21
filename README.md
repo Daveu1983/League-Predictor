@@ -8,3 +8,6 @@ Changed the structure so that each year will have it's own class, following on 9
 
 UPDATE 5/1/18
 Added two more seasons, method overridden in 94/95 season to take into account league dropping from 20 to 22 teams.
+
+UPDATE 21/08
+League table now predicted.
