@@ -6,30 +6,30 @@ public class TwoThousandOne extends NineteenNinetyThree {
         ArrayList<String> twoThousand01 = new ArrayList<String>();
         {
             twoThousand01.add(LeaguePredictor.MANCHESTER_UNITED);
-            twoThousand01.add(LeaguePredictor.ARSESNAL);
+            twoThousand01.add(LeaguePredictor.ARSENAL);
             twoThousand01.add(LeaguePredictor.LIVERPOOL);
-            twoThousand01.add("Leeds United");
-            twoThousand01.add("Ipswich Town");
+            twoThousand01.add(LeaguePredictor.LEEDS_UNITED);
+            twoThousand01.add(LeaguePredictor.IPSWICH_TOWN);
             twoThousand01.add(LeaguePredictor.CHELSEA);
-            twoThousand01.add("Sunderland");
+            twoThousand01.add(LeaguePredictor.SUNDERLAND);
             twoThousand01.add(LeaguePredictor.ASTON_VILLA);
-            twoThousand01.add("Charlton Athletic");
-            twoThousand01.add("Southampton");
-            twoThousand01.add(LeaguePredictor.NEWCASTLE_UNITED);
-            twoThousand01.add("Tottenham Hotspur");
-            twoThousand01.add("Leicester City");
-            twoThousand01.add("Middlesborough");
-            twoThousand01.add("West Ham United");
-            twoThousand01.add("Everton");
-            twoThousand01.add("Derby County");
-            twoThousand01.add("Manchester City");
-            twoThousand01.add("Coventry City");
-            twoThousand01.add("Bradford City");
+            twoThousand01.add(LeaguePredictor.CHARLTON_ATHLETIC);
+            twoThousand01.add(LeaguePredictor.SOUTHAMPTON);
+            twoThousand01.add(LeaguePredictor.NEWCASTLE);
+            twoThousand01.add(LeaguePredictor.TOTTENHAM_HOTSPUR);
+            twoThousand01.add(LeaguePredictor.LEICESTER_CITY);
+            twoThousand01.add(LeaguePredictor.MIDDLESBOROUGH);
+            twoThousand01.add(LeaguePredictor.WEST_HAM_UNITED);
+            twoThousand01.add(LeaguePredictor.EVERTON);
+            twoThousand01.add(LeaguePredictor.DERBY_COUNTY);
+            twoThousand01.add(LeaguePredictor.MANCHESTER_CITY);
+            twoThousand01.add(LeaguePredictor.COVENTRY_CITY);
+            twoThousand01.add(LeaguePredictor.BRADFORD_CITY);
             return twoThousand01;
         }
     }
     public String[] createPromoted () {
-        String[] promoted2001 = {"Fulham", LeaguePredictor.BLACKBURN_ROVERS, "Bolton Wanderers"};
+        String[] promoted2001 = {LeaguePredictor.FULHAM, LeaguePredictor.BLACKBURN_ROVERS, LeaguePredictor.BOLTON_WANDERERS};
         return promoted2001;
     }
 }

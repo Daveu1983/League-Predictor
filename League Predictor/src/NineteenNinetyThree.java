@@ -17,26 +17,26 @@ public class NineteenNinetyThree {
 
             nineteen93.add(LeaguePredictor.MANCHESTER_UNITED);
             nineteen93.add(LeaguePredictor.ASTON_VILLA);
-            nineteen93.add("Norwich City");
+            nineteen93.add(LeaguePredictor.NORWICH_CITY);
             nineteen93.add(LeaguePredictor.BLACKBURN_ROVERS);
-            nineteen93.add("QPR");
+            nineteen93.add(LeaguePredictor.QPR);
             nineteen93.add(LeaguePredictor.LIVERPOOL);
-            nineteen93.add("Sheffield Wednesday");
-            nineteen93.add("Tottenham Hotspur");
-            nineteen93.add("Manchester City");
-            nineteen93.add(LeaguePredictor.ARSESNAL);
+            nineteen93.add(LeaguePredictor.SHEFFIELD_WEDNESDAY);
+            nineteen93.add(LeaguePredictor.TOTTENHAM_HOTSPUR);
+            nineteen93.add(LeaguePredictor.MANCHESTER_CITY);
+            nineteen93.add(LeaguePredictor.ARSENAL);
             nineteen93.add(LeaguePredictor.CHELSEA);
-            nineteen93.add("Wimbledon");
-            nineteen93.add("Everton");
-            nineteen93.add("Sheffield United");
-            nineteen93.add("Coventry City");
-            nineteen93.add("Ipswich Town");
-            nineteen93.add("Leeds United");
-            nineteen93.add("Southampton");
-            nineteen93.add("Oldham Athletic");
-            nineteen93.add("Crystal Palace");
-            nineteen93.add("Middlesborough");
-            nineteen93.add("Nottingham Forest");
+            nineteen93.add(LeaguePredictor.WIMBLEDON);
+            nineteen93.add(LeaguePredictor.EVERTON);
+            nineteen93.add(LeaguePredictor.SHEFFIELD_UNITED);
+            nineteen93.add(LeaguePredictor.COVENTRY_CITY);
+            nineteen93.add(LeaguePredictor.IPSWICH_TOWN);
+            nineteen93.add(LeaguePredictor.LEEDS_UNITED);
+            nineteen93.add(LeaguePredictor.SOUTHAMPTON);
+            nineteen93.add(LeaguePredictor.OLDHAM_ATHLETIC);
+            nineteen93.add(LeaguePredictor.CRYSTAL_PALACE);
+            nineteen93.add(LeaguePredictor.MIDDLESBOROUGH);
+            nineteen93.add(LeaguePredictor.NOTTINGHAM_FOREST);
             return nineteen93;
         }
     }
@@ -48,7 +48,7 @@ public class NineteenNinetyThree {
     }
 
     public String[] createPromoted() {
-        String[] promoted1993 = {LeaguePredictor.NEWCASTLE_UNITED, "West Ham United", "Swindon Town"};
+        String[] promoted1993 = {LeaguePredictor.NEWCASTLE, LeaguePredictor.WEST_HAM_UNITED, LeaguePredictor.SWINDON_TOWN};
         return promoted1993;
 
     }

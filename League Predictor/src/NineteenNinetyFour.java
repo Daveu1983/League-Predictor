@@ -6,31 +6,31 @@ public class NineteenNinetyFour extends NineteenNinetyThree {
     
 		nineteen94.add(LeaguePredictor.MANCHESTER_UNITED);
 		nineteen94.add(LeaguePredictor.BLACKBURN_ROVERS);
-		nineteen94.add("Newcastle");
-		nineteen94.add("Arsesnal");
-		nineteen94.add("Leeds United");
-		nineteen94.add("Wimbledon"); 
-		nineteen94.add("Sheffield Wednesday");
+		nineteen94.add(LeaguePredictor.NEWCASTLE);
+		nineteen94.add(LeaguePredictor.ARSENAL);
+		nineteen94.add(LeaguePredictor.LEEDS_UNITED);
+		nineteen94.add(LeaguePredictor.WIMBLEDON);
+		nineteen94.add(LeaguePredictor.SHEFFIELD_WEDNESDAY);
 		nineteen94.add(LeaguePredictor.LIVERPOOL);
-		nineteen94.add("QPR");
+		nineteen94.add(LeaguePredictor.QPR);
 		nineteen94.add(LeaguePredictor.ASTON_VILLA);
-		nineteen94.add("Coventry City");
-		nineteen94.add("Norwich City"); 
-		nineteen94.add("West Ham United"); 
+		nineteen94.add(LeaguePredictor.COVENTRY_CITY);
+		nineteen94.add(LeaguePredictor.NORWICH_CITY);
+		nineteen94.add(LeaguePredictor.WEST_HAM_UNITED);
 		nineteen94.add(LeaguePredictor.CHELSEA);
-		nineteen94.add("Tottenham Hotspur");
-		nineteen94.add("Manchester City");
-		nineteen94.add("Everton");
-		nineteen94.add("Southampton");
-		nineteen94.add("Ipswich Town"); 
-		nineteen94.add("Sheffied United");
-		nineteen94.add("Oldham Athletic");
-		nineteen94.add("Swindon Town");
+		nineteen94.add(LeaguePredictor.TOTTENHAM_HOTSPUR);
+		nineteen94.add(LeaguePredictor.MANCHESTER_CITY);
+		nineteen94.add(LeaguePredictor.EVERTON);
+		nineteen94.add(LeaguePredictor.SOUTHAMPTON);
+		nineteen94.add(LeaguePredictor.IPSWICH_TOWN);
+		nineteen94.add(LeaguePredictor.SHEFFIELD_UNITED);
+		nineteen94.add(LeaguePredictor.OLDHAM_ATHLETIC);
+		nineteen94.add(LeaguePredictor.SWINDON_TOWN);
 		return nineteen94;
 		}
 	}
 	public String [] createPromoted(){
-		String[] promoted1993  = {"Crystal Palace", "Nottingham Forest", "Leicester City"};
+		String[] promoted1993  = {LeaguePredictor.CRYSTAL_PALACE, LeaguePredictor.NOTTINGHAM_FOREST, LeaguePredictor.NORWICH_CITY};
 			return promoted1993;
 	}
 	public ArrayList<String> replaceRelegated(ArrayList<String>readyToCompareNextYear, String[]promoted){

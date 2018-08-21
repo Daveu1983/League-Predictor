@@ -6,30 +6,30 @@ public class TwoThousandThree extends NineteenNinetyThree {
         ArrayList<String> twoThousand03 = new ArrayList<String>();
         {
             twoThousand03.add(LeaguePredictor.MANCHESTER_UNITED);
-            twoThousand03.add(LeaguePredictor.ARSESNAL);
-            twoThousand03.add(LeaguePredictor.NEWCASTLE_UNITED);
+            twoThousand03.add(LeaguePredictor.ARSENAL);
+            twoThousand03.add(LeaguePredictor.NEWCASTLE);
             twoThousand03.add(LeaguePredictor.CHELSEA);
             twoThousand03.add(LeaguePredictor.LIVERPOOL);
             twoThousand03.add(LeaguePredictor.BLACKBURN_ROVERS);
-            twoThousand03.add("Everton");
-            twoThousand03.add("Southampton");
-            twoThousand03.add("Manchester City");
-            twoThousand03.add("Tottenham Hotspur");
-            twoThousand03.add("Middlesborough");
-            twoThousand03.add("Charlton Atheltic");
-            twoThousand03.add("Birmingam City");
-            twoThousand03.add("Fulham");
-            twoThousand03.add("Leeds United");
+            twoThousand03.add(LeaguePredictor.EVERTON);
+            twoThousand03.add(LeaguePredictor.SOUTHAMPTON);
+            twoThousand03.add(LeaguePredictor.MANCHESTER_CITY);
+            twoThousand03.add(LeaguePredictor.TOTTENHAM_HOTSPUR);
+            twoThousand03.add(LeaguePredictor.MIDDLESBOROUGH);
+            twoThousand03.add(LeaguePredictor.CHARLTON_ATHLETIC);
+            twoThousand03.add(LeaguePredictor.BIRMINGHAM_CITY);
+            twoThousand03.add(LeaguePredictor.FULHAM);
+            twoThousand03.add(LeaguePredictor.LEEDS_UNITED);
             twoThousand03.add(LeaguePredictor.ASTON_VILLA);
-            twoThousand03.add("Bolton Wanderers");
-            twoThousand03.add("West Ham United");
-            twoThousand03.add("West Bromwich Albion");
-            twoThousand03.add("Sunderland");
+            twoThousand03.add(LeaguePredictor.BOLTON_WANDERERS);
+            twoThousand03.add(LeaguePredictor.WEST_HAM_UNITED);
+            twoThousand03.add(LeaguePredictor.WEST_BROMWICH_ALBION);
+            twoThousand03.add(LeaguePredictor.SUNDERLAND);
             return twoThousand03;
         }
     }
     public String[] createPromoted () {
-        String[] promoted2003 = {"Portsmouth", "Leicester City", "Wolverhampton Wanderers"};
+        String[] promoted2003 = {LeaguePredictor.PORTSMOUTH, LeaguePredictor.LEICESTER_CITY, LeaguePredictor.WOLVERHAMPTON_WANDERERS};
         return promoted2003;
     }
 

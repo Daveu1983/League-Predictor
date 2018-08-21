@@ -1,35 +1,36 @@
 import java.util.ArrayList;
 
 public class NineteenNinetyEight extends NineteenNinetyThree {
+
     public ArrayList<String> createTable() {
         ArrayList<String> nineteen98 = new ArrayList<String>();
         {
-            nineteen98.add(LeaguePredictor.ARSESNAL);
+            nineteen98.add(LeaguePredictor.ARSENAL);
             nineteen98.add(LeaguePredictor.MANCHESTER_UNITED);
             nineteen98.add(LeaguePredictor.LIVERPOOL);
             nineteen98.add(LeaguePredictor.CHELSEA);
-            nineteen98.add("Leeds United");
+            nineteen98.add(LeaguePredictor.LEEDS_UNITED);
             nineteen98.add(LeaguePredictor.BLACKBURN_ROVERS);
             nineteen98.add(LeaguePredictor.ASTON_VILLA);
-            nineteen98.add("West Ham United");
-            nineteen98.add("Derby County");
-            nineteen98.add("Leicester City");
-            nineteen98.add("Coventry City");
-            nineteen98.add("Southampton");
-            nineteen98.add(LeaguePredictor.NEWCASTLE_UNITED);
-            nineteen98.add("Tottenham Hotspur");
-            nineteen98.add("Wimbledon");
-            nineteen98.add("Sheffield Wednesday");
-            nineteen98.add("Everton");
-            nineteen98.add("Bolton Wanderers");
-            nineteen98.add("Barnsley");
-            nineteen98.add("Crystal Palace");
+            nineteen98.add(LeaguePredictor.WEST_HAM_UNITED);
+            nineteen98.add(LeaguePredictor.DERBY_COUNTY);
+            nineteen98.add(LeaguePredictor.LEICESTER_CITY);
+            nineteen98.add(LeaguePredictor.COVENTRY_CITY);
+            nineteen98.add(LeaguePredictor.SOUTHAMPTON);
+            nineteen98.add(LeaguePredictor.NEWCASTLE);
+            nineteen98.add(LeaguePredictor.SOUTHAMPTON);
+            nineteen98.add(LeaguePredictor.WIMBLEDON);
+            nineteen98.add(LeaguePredictor.SHEFFIELD_WEDNESDAY);
+            nineteen98.add(LeaguePredictor.EVERTON);
+            nineteen98.add(LeaguePredictor.BOLTON_WANDERERS);
+            nineteen98.add(LeaguePredictor.BARNSLEY);
+            nineteen98.add(LeaguePredictor.CRYSTAL_PALACE);
             return nineteen98;
         }
     }
 
     public String[] createPromoted() {
-        String[] promoted1998 = {"Nottingham Forrest", "Middlesborough", "Charlton Athletic"};
+        String[] promoted1998 = {LeaguePredictor.NOTTINGHAM_FOREST, LeaguePredictor.MIDDLESBOROUGH, LeaguePredictor.CHARLTON_ATHLETIC};
         return promoted1998;
     }
 }

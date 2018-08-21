@@ -3,30 +3,30 @@ public class NineteenNinetySix extends NineteenNinetyThree {
 	public ArrayList<String> createTable() {
 		ArrayList<String> nineteen96 = new ArrayList<String>(); {
 			nineteen96.add(LeaguePredictor.MANCHESTER_UNITED);
-			nineteen96.add(LeaguePredictor.NEWCASTLE_UNITED);
+			nineteen96.add(LeaguePredictor.NEWCASTLE);
 			nineteen96.add(LeaguePredictor.LIVERPOOL);
 			nineteen96.add(LeaguePredictor.ASTON_VILLA);
-			nineteen96.add(LeaguePredictor.ARSESNAL);
-			nineteen96.add("Everton");
+			nineteen96.add(LeaguePredictor.ARSENAL);
+			nineteen96.add(LeaguePredictor.EVERTON);
 			nineteen96.add(LeaguePredictor.BLACKBURN_ROVERS);
-			nineteen96.add("Tottenham Hotspur");
-			nineteen96.add("Nottingham Forest");
-			nineteen96.add("West Ham United");
+			nineteen96.add(LeaguePredictor.TOTTENHAM_HOTSPUR);
+			nineteen96.add(LeaguePredictor.NOTTINGHAM_FOREST);
+			nineteen96.add(LeaguePredictor.WEST_HAM_UNITED);
 			nineteen96.add(LeaguePredictor.CHELSEA);
-			nineteen96.add("Middlesborough");
-			nineteen96.add("Leeds United");
-			nineteen96.add("Wimbledon");
-			nineteen96.add("Sheffield Wednesday");
-			nineteen96.add("Coventry City");
-			nineteen96.add("Southampton");
-			nineteen96.add("Manchester City");
-			nineteen96.add("QPR");
-			nineteen96.add("Bolton Wanderers");
+			nineteen96.add(LeaguePredictor.MIDDLESBOROUGH);
+			nineteen96.add(LeaguePredictor.LEEDS_UNITED);
+			nineteen96.add(LeaguePredictor.WIMBLEDON);
+			nineteen96.add(LeaguePredictor.SHEFFIELD_WEDNESDAY);
+			nineteen96.add(LeaguePredictor.COVENTRY_CITY);
+			nineteen96.add(LeaguePredictor.SOUTHAMPTON);
+			nineteen96.add(LeaguePredictor.MANCHESTER_CITY);
+			nineteen96.add(LeaguePredictor.QPR);
+			nineteen96.add(LeaguePredictor.BOLTON_WANDERERS);
 			return nineteen96;
 		}
 	}
 	public String [] createPromoted() {
-		String[] promoted1996 = {"Sunderland", "Derby County", "Leicester City"};
+		String[] promoted1996 = {LeaguePredictor.SUNDERLAND, LeaguePredictor.DERBY_COUNTY, LeaguePredictor.LEICESTER_CITY};
 		return promoted1996;
 	}
 }
