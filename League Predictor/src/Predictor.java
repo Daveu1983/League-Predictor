@@ -238,204 +238,26 @@ public class Predictor {
         List<Map.Entry<Integer, Integer>> whereNineteenWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrNineteenFinishedNextYear);
         List<Map.Entry<Integer, Integer>> whereTwentyWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrTwentyFinishedNextYear);
 
-        int i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereOneWillFini) {
-
-            if (isaBoolean(whereOneWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
-        i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereTwoWillFini) {
-
-            if (isaBoolean(whereTwoWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
-        i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereThreeWillFini) {
-
-            if (isaBoolean(whereThreeWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
-        i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereFourWillFini) {
-
-            if (isaBoolean(whereFourWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
-        for (Map.Entry<Integer, Integer> entry : whereFiveWillFini) {
-
-            if (isaBoolean(whereFiveWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
-        i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereSixWillFini) {
-
-            if (isaBoolean(whereSixWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
-        i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereSevenWillFini) {
-
-            if (isaBoolean(whereSevenWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
-        i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereEightWillFini) {
-
-            if (isaBoolean(whereEightWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
-        i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereNineWillFini) {
-
-            if (isaBoolean(whereNineWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
-        i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereTenWillFini) {
-
-            if (isaBoolean(whereTenWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
-        i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereElevenWillFini) {
-
-            if (isaBoolean(whereElevenWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
-        i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereTwelveWillFini) {
-
-            if (isaBoolean(whereTwelveWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
-        i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereThirteenWillFini) {
-
-            if (isaBoolean(whereThirteenWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
-        i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereFourteenWillFini) {
-
-            if (isaBoolean(whereFourteenWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
-        i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereFifteenWillFini) {
-
-            if (isaBoolean(whereFifteenWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
-        i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereSixteenWillFini) {
-
-            if (isaBoolean(whereSixteenWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
-        i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereSeventeenWillFini) {
-
-            if (isaBoolean(whereSeventeenWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
-        i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereEighteenWillFini) {
-
-            if (isaBoolean(whereEighteenWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
-        i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereNineteenWillFini) {
-
-            if (isaBoolean(whereNineteenWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
-        i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereTwentyWillFini) {
-            if (isaBoolean(whereTwentyWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
-                break;
-            } else {
-                i++;
-            }
-        }
+        wherePosistionFinishedNextYear(whereOneWillFini);
+        wherePosistionFinishedNextYear(whereTwoWillFini);
+        wherePosistionFinishedNextYear(whereThreeWillFini);
+        wherePosistionFinishedNextYear(whereFourWillFini);
+        wherePosistionFinishedNextYear(whereFiveWillFini);
+        wherePosistionFinishedNextYear(whereSixWillFini);
+        wherePosistionFinishedNextYear(whereSevenWillFini);
+        wherePosistionFinishedNextYear(whereEightWillFini);
+        wherePosistionFinishedNextYear(whereNineWillFini);
+        wherePosistionFinishedNextYear(whereTenWillFini);
+        wherePosistionFinishedNextYear(whereElevenWillFini);
+        wherePosistionFinishedNextYear(whereTwelveWillFini);
+        wherePosistionFinishedNextYear(whereThirteenWillFini);
+        wherePosistionFinishedNextYear(whereFourteenWillFini);
+        wherePosistionFinishedNextYear(whereFifteenWillFini);
+        wherePosistionFinishedNextYear(whereSixteenWillFini);
+        wherePosistionFinishedNextYear(whereSeventeenWillFini);
+        wherePosistionFinishedNextYear(whereEighteenWillFini);
+        wherePosistionFinishedNextYear(whereNineteenWillFini);
+        wherePosistionFinishedNextYear(whereTwentyWillFini);
 
 
         for (int d = 0; d < yearTwentySixTable.size(); d++) {
@@ -459,6 +281,19 @@ public class Predictor {
 
 
 
+    }
+
+    private static void wherePosistionFinishedNextYear(List<Map.Entry<Integer, Integer>> whereTwentyWillFini) {
+        int i;
+        i = 0;
+        for (Map.Entry<Integer, Integer> entry : whereTwentyWillFini) {
+            if (isaBoolean(whereTwentyWillFini, i, entry)) {
+                LeaguePredictor.leaguePredicted.add(entry.getKey());
+                break;
+            } else {
+                i++;
+            }
+        }
     }
 
     private static boolean isaBoolean(List < Map.Entry < Integer, Integer >> whereEighteenWillFini,int i, Map.
