@@ -4,239 +4,205 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class Predictor {
+import static java.util.Collections.reverseOrder;
 
-    public static void predict() {
+class Predictor {
+    private static ArrayList<Integer> leaguePredicted = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrOneFinishedNextYear = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrTwoFinishedNextYear = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrThreeFinishedNextYear = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrFourFinishedNextYear = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrFiveFinishedNextYear = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrSixFinishedNextYear = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrSevenFinishedNextYear = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrEightFinishedNextYear = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrNineFinishedNextYear = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrTenFinishedNextYear = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrElevenFinishedNextYear = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrTwelveFinishedNextYear = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrThirteenFinishedNextYear = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrFourteenFinishedNextYear = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrFifteenFinishedNextYear = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrSixteenFinishedNextYear = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrSeventeenFinishedNextYear = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrEighteenFinishedNextYear = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrNineteenFinishedNextYear = new ArrayList<>();
+    private static ArrayList<Integer> whereNumbrTwentyFinishedNextYear = new ArrayList<>();
+    private static Map<String, Integer> theLeague = new HashMap();
 
+    static void predict() {
+        compareOneSeasonToTheNextAndStoreDifference();
+        getMostCommonNextYearPosition();
+        predictLeagueFromCurrentLastTable();
+    }
+
+    private static void compareOneSeasonToTheNextAndStoreDifference() {
+        NineteenNinetyThree[] seasons = createLeagueYears();
+
+        ArrayList<String> currentTable;
+        String[] promoted;
+        ArrayList<String> currentTableWithPromoted;
+        ArrayList<String> nextTable;
+
+        for (int i = 0; i < (seasons.length-1); i++) {
+            currentTable = seasons[i].createTable();
+            nextTable = seasons[i+1].createTable();
+            promoted = seasons[i].createPromoted();
+            currentTableWithPromoted = seasons[i].replaceRelegated(currentTable,promoted);
+            storeDifference(currentTableWithPromoted,nextTable);
+        }
+    }
+
+    private static NineteenNinetyThree[] createLeagueYears() {
         NineteenNinetyThree yearOne = new NineteenNinetyThree();
-        ArrayList<String> yearOneTable = yearOne.createTable();
         NineteenNinetyFour yearTwo = new NineteenNinetyFour();
-        ArrayList<String> yearTwoTable = yearTwo.createTable();
-        String[] promotedYearOne = yearOne.createPromoted();
-        ArrayList<String> yearOneReadyToCompare = yearOne.replaceRelegated(yearOneTable, promotedYearOne);
-        yearTwo.positionDifference(yearOneReadyToCompare, yearTwoTable);
-        NineteenNinetyThree.storeDifference(yearOneReadyToCompare, yearTwoTable);
-        System.out.println("");
-
         NineteenNinetyFive yearThree = new NineteenNinetyFive();
-        ArrayList<String> yearThreeTable = yearThree.createTable();
-        String[] promotedYearTwo = yearTwo.createPromoted();
-        ArrayList<String> yearTwoReadyToCompare = yearTwo.replaceRelegated(yearTwoTable, promotedYearTwo);
-        yearThree.positionDifference(yearTwoReadyToCompare, yearThreeTable);
-        NineteenNinetyThree.storeDifference(yearTwoReadyToCompare, yearThreeTable);
-        System.out.println("");
-
         NineteenNinetySix yearFour = new NineteenNinetySix();
-        ArrayList<String> yearFourTable = yearFour.createTable();
-        String[] promotedYearThree = yearThree.createPromoted();
-        ArrayList<String> yearThreeReadyToCompare = yearThree.replaceRelegated(yearThreeTable, promotedYearThree);
-        yearFour.positionDifference(yearThreeReadyToCompare, yearFourTable);
-        NineteenNinetyThree.storeDifference(yearThreeReadyToCompare, yearFourTable);
-        System.out.println("");
-
         NineteenNinetySeven yearFive = new NineteenNinetySeven();
-        ArrayList<String> yearFiveTable = yearFive.createTable();
-        String[] promotedYearFour = yearFour.createPromoted();
-        ArrayList<String> yearFourReadyToCompare = yearFour.replaceRelegated(yearFourTable, promotedYearFour);
-        yearFive.positionDifference(yearFourReadyToCompare, yearFiveTable);
-        NineteenNinetyThree.storeDifference(yearFourReadyToCompare, yearFiveTable);
-        System.out.println("");
-
         NineteenNinetyEight yearSix = new NineteenNinetyEight();
-        ArrayList<String> yearSixTable = yearSix.createTable();
-        String[] promotedYearFive = yearFive.createPromoted();
-        ArrayList<String> yearFiveReadyToCompare = yearFive.replaceRelegated(yearFiveTable, promotedYearFive);
-        yearSix.positionDifference(yearFiveReadyToCompare, yearSixTable);
-        NineteenNinetyThree.storeDifference(yearFiveReadyToCompare, yearSixTable);
-        System.out.println("");
-
         NineteenNinetyNine yearSeven = new NineteenNinetyNine();
-        ArrayList<String> yearSevenTable = yearSeven.createTable();
-        String[] promotedYearSix = yearSix.createPromoted();
-        ArrayList<String> yearSixReadyToCompare = yearSix.replaceRelegated(yearSixTable, promotedYearSix);
-        yearSeven.positionDifference(yearSixReadyToCompare, yearSevenTable);
-        NineteenNinetyThree.storeDifference(yearSixReadyToCompare, yearSevenTable);
-        System.out.println("");
-
         TwoThousand yearEight = new TwoThousand();
-        ArrayList<String> yearEightTable = yearEight.createTable();
-        String[] promotedYearSeven = yearSeven.createPromoted();
-        ArrayList<String> yearSevenReadyToCompare = yearSeven.replaceRelegated(yearSevenTable, promotedYearSeven);
-        yearEight.positionDifference(yearSevenReadyToCompare, yearEightTable);
-        NineteenNinetyThree.storeDifference(yearSevenReadyToCompare, yearEightTable);
-        System.out.println("");
-
         TwoThousandOne yearNine = new TwoThousandOne();
-        ArrayList<String> yearNineTable = yearNine.createTable();
-        String[] promotedYearEight = yearEight.createPromoted();
-        ArrayList<String> yearEightReadyToCompare = yearEight.replaceRelegated(yearEightTable, promotedYearEight);
-        yearNine.positionDifference(yearEightReadyToCompare, yearNineTable);
-        NineteenNinetyThree.storeDifference(yearEightReadyToCompare, yearNineTable);
-        System.out.println("");
-
         TwoThousandTwo yearTen = new TwoThousandTwo();
-        ArrayList<String> yearTenTable = yearTen.createTable();
-        String[] promotedYearNine = yearNine.createPromoted();
-        ArrayList<String> yearNineReadyToCompare = yearNine.replaceRelegated(yearNineTable, promotedYearNine);
-        yearTen.positionDifference(yearNineReadyToCompare, yearTenTable);
-        NineteenNinetyThree.storeDifference(yearNineReadyToCompare, yearTenTable);
-        System.out.println("");
-
         TwoThousandThree yearEleven = new TwoThousandThree();
-        ArrayList<String> yearElevenTable = yearEleven.createTable();
-        String[] promotedYearTen = yearTen.createPromoted();
-        ArrayList<String> yearTenReadyToCompare = yearTen.replaceRelegated(yearTenTable, promotedYearTen);
-        yearEleven.positionDifference(yearTenReadyToCompare, yearElevenTable);
-        NineteenNinetyThree.storeDifference(yearTenReadyToCompare, yearElevenTable);
-        System.out.println("");
-
         TwoThousandFour yearTwelve = new TwoThousandFour();
-        ArrayList<String> yearTwelveTable = yearTwelve.createTable();
-        String[] promotedYearEleven = yearEleven.createPromoted();
-        ArrayList<String> yearElevenReadyToCompare = yearEleven.replaceRelegated(yearElevenTable, promotedYearEleven);
-        yearTwelve.positionDifference(yearElevenReadyToCompare, yearTwelveTable);
-        NineteenNinetyThree.storeDifference(yearElevenReadyToCompare, yearTwelveTable);
-        System.out.println("");
-
         TwoThousandFive yearThirteen = new TwoThousandFive();
-        ArrayList<String> yearThirteenTable = yearThirteen.createTable();
-        String[] promotedYearTwelve = yearTwelve.createPromoted();
-        ArrayList<String> yearTwelveReadyToCompare = yearTwelve.replaceRelegated(yearTwelveTable, promotedYearTwelve);
-        yearThirteen.positionDifference(yearTwelveReadyToCompare, yearThirteenTable);
-        NineteenNinetyThree.storeDifference(yearTwelveReadyToCompare, yearThirteenTable);
-        System.out.println("");
-
         TwoThousandSix yearFourteen = new TwoThousandSix();
-        ArrayList<String> yearFourteenTable = yearFourteen.createTable();
-        String[] promotedYearThirteen = yearThirteen.createPromoted();
-        ArrayList<String> yearThirteenReadyToCompare = yearThirteen.replaceRelegated(yearThirteenTable, promotedYearThirteen);
-        yearFourteen.positionDifference(yearThirteenReadyToCompare, yearFourteenTable);
-        NineteenNinetyThree.storeDifference(yearThirteenReadyToCompare, yearFourteenTable);
-        System.out.println("");
-
         TwoThousandSeven yearFifteen = new TwoThousandSeven();
-        ArrayList<String> yearFifteenTable = yearFifteen.createTable();
-        String[] promotedYearFourteen = yearFourteen.createPromoted();
-        ArrayList<String> yearFourteenReadyToCompare = yearFourteen.replaceRelegated(yearFourteenTable, promotedYearFourteen);
-        yearFifteen.positionDifference(yearFourteenReadyToCompare, yearFifteenTable);
-        NineteenNinetyThree.storeDifference(yearFourteenReadyToCompare, yearFifteenTable);
-        System.out.println("");
-
         TwoThousandEight yearSixteen = new TwoThousandEight();
-        ArrayList<String> yearSixteenTable = yearSixteen.createTable();
-        String[] promotedYearFifteen = yearFifteen.createPromoted();
-        ArrayList<String> yearFifteenReadyToCompare = yearFifteen.replaceRelegated(yearFifteenTable, promotedYearFifteen);
-        yearSixteen.positionDifference(yearFifteenReadyToCompare, yearSixteenTable);
-        NineteenNinetyThree.storeDifference(yearFifteenReadyToCompare, yearSixteenTable);
-        System.out.println("");
-
         TwoThousandNine yearSeventeen = new TwoThousandNine();
-        ArrayList<String> yearSeventeenTable = yearSeventeen.createTable();
-        String[] promotedYearSixteen = yearSixteen.createPromoted();
-        ArrayList<String> yearSixteenReadyToCompare = yearSixteen.replaceRelegated(yearSixteenTable, promotedYearSixteen);
-        yearSeventeen.positionDifference(yearSixteenReadyToCompare, yearSeventeenTable);
-        NineteenNinetyThree.storeDifference(yearSixteenReadyToCompare, yearSeventeenTable);
-        System.out.println("");
-
         TwoThousandTen yearEighteen = new TwoThousandTen();
-        ArrayList<String> yearEighteenTable = yearEighteen.createTable();
-        String[] promotedYearSeventeen = yearSeventeen.createPromoted();
-        ArrayList<String> yearSeventeenReadyToCompare = yearSeventeen.replaceRelegated(yearSeventeenTable, promotedYearSeventeen);
-        yearEighteen.positionDifference(yearSeventeenReadyToCompare, yearEighteenTable);
-        NineteenNinetyThree.storeDifference(yearSeventeenReadyToCompare, yearEighteenTable);
-        System.out.println("");
-
         TwoThousandEleven yearNineteen = new TwoThousandEleven();
-        ArrayList<String> yearNineteenTable = yearNineteen.createTable();
-        String[] promotedYearEighteen = yearEighteen.createPromoted();
-        ArrayList<String> yearEighteenReadyToCompare = yearEighteen.replaceRelegated(yearEighteenTable, promotedYearEighteen);
-        yearNineteen.positionDifference(yearEighteenReadyToCompare, yearNineteenTable);
-        NineteenNinetyThree.storeDifference(yearEighteenReadyToCompare, yearNineteenTable);
-        System.out.println("");
-
         TwoThousandTwelve yearTwenty = new TwoThousandTwelve();
-        ArrayList<String> yearTwentyTable = yearTwenty.createTable();
-        String[] promotedYearNineteen = yearNineteen.createPromoted();
-        ArrayList<String> yearNineteenReadyToCompare = yearNineteen.replaceRelegated(yearNineteenTable, promotedYearNineteen);
-        yearTwenty.positionDifference(yearNineteenReadyToCompare, yearTwentyTable);
-        NineteenNinetyThree.storeDifference(yearNineteenReadyToCompare, yearTwentyTable);
-        System.out.println("");
-
         TwoThousandThirteen yearTwentyOne = new TwoThousandThirteen();
-        ArrayList<String> yearTwentyOneTable = yearTwentyOne.createTable();
-        String[] promotedYearTwenty = yearTwenty.createPromoted();
-        ArrayList<String> yearTwentyReadyToCompare = yearTwenty.replaceRelegated(yearTwentyTable, promotedYearTwenty);
-        yearTwentyOne.positionDifference(yearTwentyReadyToCompare, yearTwentyOneTable);
-        NineteenNinetyThree.storeDifference(yearTwentyReadyToCompare, yearTwentyOneTable);
-        System.out.println("");
-
         TwoThousandFourteen yearTwentyTwo = new TwoThousandFourteen();
-        ArrayList<String> yearTwentyTwoTable = yearTwentyTwo.createTable();
-        String[] promotedYearTwentyOne = yearTwentyOne.createPromoted();
-        ArrayList<String> yearTwentyOneReadyToCompare = yearTwentyOne.replaceRelegated(yearTwentyOneTable, promotedYearTwentyOne);
-        yearTwentyTwo.positionDifference(yearTwentyOneReadyToCompare, yearTwentyTwoTable);
-        NineteenNinetyThree.storeDifference(yearTwentyOneReadyToCompare, yearTwentyTwoTable);
-        System.out.println("");
-
         TwoThousandFifteen yearTwentyThree = new TwoThousandFifteen();
-        ArrayList<String> yearTwentyThreeTable = yearTwentyThree.createTable();
-        String[] promotedYearTwentyTwo = yearTwentyTwo.createPromoted();
-        ArrayList<String> yearTwentyTwoReadyToCompare = yearTwentyTwo.replaceRelegated(yearTwentyTwoTable, promotedYearTwentyTwo);
-        yearTwentyThree.positionDifference(yearTwentyTwoReadyToCompare, yearTwentyThreeTable);
-        NineteenNinetyThree.storeDifference(yearTwentyTwoReadyToCompare, yearTwentyThreeTable);
-        System.out.println("");
-
         TwoThousandSixteen yearTwentyFour = new TwoThousandSixteen();
-        ArrayList<String> yearTwentyFourTable = yearTwentyFour.createTable();
-        String[] promotedYearTwentyThree = yearTwentyThree.createPromoted();
-        ArrayList<String> yearTwentyThreeReadyToCompare = yearTwentyThree.replaceRelegated(yearTwentyThreeTable, promotedYearTwentyThree);
-        yearTwentyFour.positionDifference(yearTwentyThreeReadyToCompare, yearTwentyFourTable);
-        NineteenNinetyThree.storeDifference(yearTwentyThreeReadyToCompare, yearTwentyFourTable);
-        System.out.println("");
-
         TwoThousandSeventeen yearTwentyFive = new TwoThousandSeventeen();
-        ArrayList<String> yearTwentyFiveTable = yearTwentyFive.createTable();
-        String[] promotedYearTwentyFour = yearTwentyFour.createPromoted();
-        ArrayList<String> yearTwentyFourReadyToCompare = yearTwentyFour.replaceRelegated(yearTwentyFourTable, promotedYearTwentyFour);
-        yearTwentyFive.positionDifference(yearTwentyFourReadyToCompare, yearTwentyFiveTable);
-        NineteenNinetyThree.storeDifference(yearTwentyFourReadyToCompare, yearTwentyFiveTable);
-        System.out.println("");
-
         TwoThousandEighteen yearTwentySix = new TwoThousandEighteen();
-        ArrayList<String> yearTwentySixTable = yearTwentySix.createTable();
-        String[] promotedYearTwentyFive = yearTwentyFive.createPromoted();
-        ArrayList<String> yearTwentyFiveReadyToCompare = yearTwentyFive.replaceRelegated(yearTwentyFiveTable, promotedYearTwentyFive);
-        yearTwentySix.positionDifference(yearTwentyFiveReadyToCompare, yearTwentySixTable);
-        NineteenNinetyThree.storeDifference(yearTwentyFiveReadyToCompare, yearTwentySixTable);
-        System.out.println("");
 
-        String[] promotedYearTwentySix = yearTwentySix.createPromoted();
-        ArrayList<String> yearTwentySixReadyToCompare = yearTwentyFive.replaceRelegated(yearTwentySixTable, promotedYearTwentySix);
-        //System.out.println(yearTwentySixReadyToCompare);
+        NineteenNinetyThree[] seasons = new NineteenNinetyThree[26];
+        seasons[0] = yearOne;
+        seasons[1] = yearTwo;
+        seasons[2] = yearThree;
+        seasons[3] = yearFour;
+        seasons[4] = yearFive;
+        seasons[5] = yearSix;
+        seasons[6] = yearSeven;
+        seasons[7] = yearEight;
+        seasons[8] = yearNine;
+        seasons[9] = yearTen;
+        seasons[10] = yearEleven;
+        seasons[11] = yearTwelve;
+        seasons[12] = yearThirteen;
+        seasons[13] = yearFourteen;
+        seasons[14] = yearFifteen;
+        seasons[15] = yearSixteen;
+        seasons[16] = yearSeventeen;
+        seasons[17] = yearEighteen;
+        seasons[18] = yearNineteen;
+        seasons[19] = yearTwenty;
+        seasons[20] = yearTwentyOne;
+        seasons[21] = yearTwentyTwo;
+        seasons[22] = yearTwentyThree;
+        seasons[23] = yearTwentyFour;
+        seasons[24] = yearTwentyFive;
+        seasons[25] = yearTwentySix;
+        return seasons;
+    }
+   private static void storeDifference(ArrayList<String> previousYear, ArrayList<String> currentYear) {
+        for (int j = 0; j < currentYear.size(); j++) {
+            for (int i = 0; i < previousYear.size(); i++) {
+                if (previousYear.get(i) == currentYear.get(j)) {
+                    Integer k = j + 1;
+
+                    if (i == 0) {
+                        whereNumbrOneFinishedNextYear.add(k);
+                    }
+                    if (i == 1) {
+                        whereNumbrTwoFinishedNextYear.add(k);
+                    }
+                    if (i == 2) {
+                        whereNumbrThreeFinishedNextYear.add(k);
+                    }
+                    if (i == 3) {
+                        whereNumbrFourFinishedNextYear.add(k);
+                    }
+                    if (i == 4) {
+                        whereNumbrFiveFinishedNextYear.add(k);
+                    }
+                    if (i == 5) {
+                        whereNumbrSixFinishedNextYear.add(k);
+                    }
+                    if (i == 6) {
+                        whereNumbrSevenFinishedNextYear.add(k);
+                    }
+                    if (i == 7) {
+                        whereNumbrEightFinishedNextYear.add(k);
+                    }
+                    if (i == 8) {
+                        whereNumbrNineFinishedNextYear.add(k);
+                    }
+                    if (i == 9) {
+                        whereNumbrTenFinishedNextYear.add(k);
+                    }
+                    if (i == 10) {
+                        whereNumbrElevenFinishedNextYear.add(k);
+                    }
+                    if (i == 11) {
+                        whereNumbrTwelveFinishedNextYear.add(k);
+                    }
+                    if (i == 12) {
+                        whereNumbrThirteenFinishedNextYear.add(k);
+                    }
+                    if (i == 13) {
+                        whereNumbrFourteenFinishedNextYear.add(k);
+                    }
+                    if (i == 14) {
+                        whereNumbrFifteenFinishedNextYear.add(k);
+                    }
+                    if (i == 15) {
+                        whereNumbrSixteenFinishedNextYear.add(k);
+                    }
+                    if (i == 16) {
+                        whereNumbrSeventeenFinishedNextYear.add(k);
+                    }
+                    if (i == 17) {
+                        whereNumbrEighteenFinishedNextYear.add(k);
+                    }
+                    if (i == 18) {
+                        whereNumbrNineteenFinishedNextYear.add(k);
+                    }
+                    if (i == 19) {
+                        whereNumbrTwentyFinishedNextYear.add(k);
+                    }
 
 
-        NineteenNinetyThree print = new NineteenNinetyThree();
-        // print.printArray(whereNumbrOneFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereOneWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrOneFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereTwoWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrTwoFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereThreeWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrThreeFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereFourWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrFourFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereFiveWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrFiveFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereSixWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrSixFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereSevenWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrSevenFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereEightWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrEightFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereNineWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrNineFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereTenWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrTenFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereElevenWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrElevenFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereTwelveWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrTwelveFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereThirteenWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrThirteenFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereFourteenWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrFourteenFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereFifteenWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrFifteenFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereSixteenWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrSixteenFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereSeventeenWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrSeventeenFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereEighteenWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrEighteenFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereNineteenWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrNineteenFinishedNextYear);
-        List<Map.Entry<Integer, Integer>> whereTwentyWillFini = NineteenNinetyThree.printMostOften(LeaguePredictor.whereNumbrTwentyFinishedNextYear);
+                }
+            }
+        }
+    }
+    private static void getMostCommonNextYearPosition() {
+        List<Map.Entry<Integer, Integer>> whereOneWillFini = storeMostOften(whereNumbrOneFinishedNextYear);
+        List<Map.Entry<Integer, Integer>> whereTwoWillFini = storeMostOften(whereNumbrTwoFinishedNextYear);
+        List<Map.Entry<Integer, Integer>> whereThreeWillFini = storeMostOften(whereNumbrThreeFinishedNextYear);
+        List<Map.Entry<Integer, Integer>> whereFourWillFini = storeMostOften(whereNumbrFourFinishedNextYear);
+        List<Map.Entry<Integer, Integer>> whereFiveWillFini = storeMostOften(whereNumbrFiveFinishedNextYear);
+        List<Map.Entry<Integer, Integer>> whereSixWillFini = storeMostOften(whereNumbrSixFinishedNextYear);
+        List<Map.Entry<Integer, Integer>> whereSevenWillFini = storeMostOften(whereNumbrSevenFinishedNextYear);
+        List<Map.Entry<Integer, Integer>> whereEightWillFini = storeMostOften(whereNumbrEightFinishedNextYear);
+        List<Map.Entry<Integer, Integer>> whereNineWillFini = storeMostOften(whereNumbrNineFinishedNextYear);
+        List<Map.Entry<Integer, Integer>> whereTenWillFini = storeMostOften(whereNumbrTenFinishedNextYear);
+        List<Map.Entry<Integer, Integer>> whereElevenWillFini = storeMostOften(whereNumbrElevenFinishedNextYear);
+        List<Map.Entry<Integer, Integer>> whereTwelveWillFini = storeMostOften(whereNumbrTwelveFinishedNextYear);
+        List<Map.Entry<Integer, Integer>> whereThirteenWillFini = storeMostOften(whereNumbrThirteenFinishedNextYear);
+        List<Map.Entry<Integer, Integer>> whereFourteenWillFini = storeMostOften(whereNumbrFourteenFinishedNextYear);
+        List<Map.Entry<Integer, Integer>> whereFifteenWillFini = storeMostOften(whereNumbrFifteenFinishedNextYear);
+        List<Map.Entry<Integer, Integer>> whereSixteenWillFini = storeMostOften(whereNumbrSixteenFinishedNextYear);
+        List<Map.Entry<Integer, Integer>> whereSeventeenWillFini = storeMostOften(whereNumbrSeventeenFinishedNextYear);
+        List<Map.Entry<Integer, Integer>> whereEighteenWillFini = storeMostOften(whereNumbrEighteenFinishedNextYear);
+        List<Map.Entry<Integer, Integer>> whereNineteenWillFini = storeMostOften(whereNumbrNineteenFinishedNextYear);
+        List<Map.Entry<Integer, Integer>> whereTwentyWillFini = storeMostOften(whereNumbrTwentyFinishedNextYear);
 
         wherePosistionFinishedNextYear(whereOneWillFini);
         wherePosistionFinishedNextYear(whereTwoWillFini);
@@ -258,18 +224,39 @@ public class Predictor {
         wherePosistionFinishedNextYear(whereEighteenWillFini);
         wherePosistionFinishedNextYear(whereNineteenWillFini);
         wherePosistionFinishedNextYear(whereTwentyWillFini);
+    }
 
+    public static List<Map.Entry<Integer,Integer>> storeMostOften(ArrayList<Integer> mostOften) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int m = 0; m < mostOften.size(); m++) {
+            Integer count = map.get(mostOften.get(m));
+            map.put(mostOften.get(m), count == null ? 1 : count + 1);
 
-        for (int d = 0; d < yearTwentySixTable.size(); d++) {
+        }
 
-            LeaguePredictor.theLeague.put(yearTwentySixTable.get(d), LeaguePredictor.leaguePredicted.get(d));
+        List<Map.Entry<Integer, Integer>> sorted_map =
+                map.entrySet()
+                        .stream()
+                        .sorted(reverseOrder(Map.Entry.comparingByValue()))
+                        .collect(Collectors.toList());
+        return sorted_map;
+    }
+
+    private static void predictLeagueFromCurrentLastTable() {
+        TwoThousandEighteen tableToPredict = new TwoThousandEighteen();
+        ArrayList<String> lastTable = tableToPredict.createTable();
+        String[] lastPromoted = tableToPredict.createPromoted();
+        ArrayList<String> lastTableToCompare = tableToPredict.replaceRelegated(lastTable,lastPromoted);
+
+        for (int d = 0; d < lastTableToCompare.size(); d++) {
+
+            theLeague.put(lastTableToCompare.get(d), leaguePredicted.get(d));
 
 
         }
-        System.out.println(LeaguePredictor.theLeague);
 
         List<Map.Entry<String, Integer>> theLeagueSorted =
-                LeaguePredictor.theLeague.entrySet()
+                theLeague.entrySet()
                         .stream()
                         .sorted((Map.Entry.comparingByValue()))
                         .collect(Collectors.toList());
@@ -278,17 +265,14 @@ public class Predictor {
 
             System.out.println(entry);
         }
-
-
-
     }
 
-    private static void wherePosistionFinishedNextYear(List<Map.Entry<Integer, Integer>> whereTwentyWillFini) {
+    private static void wherePosistionFinishedNextYear(List<Map.Entry<Integer, Integer>> wherePositionWillFini) {
         int i;
         i = 0;
-        for (Map.Entry<Integer, Integer> entry : whereTwentyWillFini) {
-            if (isaBoolean(whereTwentyWillFini, i, entry)) {
-                LeaguePredictor.leaguePredicted.add(entry.getKey());
+        for (Map.Entry<Integer, Integer> entry : wherePositionWillFini) {
+            if (isaBoolean(wherePositionWillFini, i, entry)) {
+                leaguePredicted.add(entry.getKey());
                 break;
             } else {
                 i++;
@@ -296,9 +280,10 @@ public class Predictor {
         }
     }
 
-    private static boolean isaBoolean(List < Map.Entry < Integer, Integer >> whereEighteenWillFini,int i, Map.
+    private static boolean isaBoolean(List < Map.Entry < Integer, Integer >> wherePositionWillFini,int i, Map.
             Entry<Integer, Integer> entry){
-        return entry.equals(whereEighteenWillFini.get(i)) && (!(LeaguePredictor.leaguePredicted.contains(entry.getKey())));
+        return entry.equals(wherePositionWillFini.get(i)) && (!(leaguePredicted.contains(entry.getKey())));
     }
+
 }
 

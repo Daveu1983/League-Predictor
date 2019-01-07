@@ -30,20 +30,8 @@ public class NineteenNinetyFour extends NineteenNinetyThree {
 		}
 	}
 	public String [] createPromoted(){
-		String[] promoted1993  = {LeaguePredictor.CRYSTAL_PALACE, LeaguePredictor.NOTTINGHAM_FOREST, LeaguePredictor.NORWICH_CITY};
-			return promoted1993;
+		String[] promoted1994  = {LeaguePredictor.CRYSTAL_PALACE, LeaguePredictor.NOTTINGHAM_FOREST, LeaguePredictor.NORWICH_CITY};
+			return promoted1994;
 	}
-	public ArrayList<String> replaceRelegated(ArrayList<String>readyToCompareNextYear, String[]promoted){
-		readyToCompareNextYear.remove(21);
-		readyToCompareNextYear.remove(20);
-		int numberOfTeams = readyToCompareNextYear.size();
-		int numberOfPromoted = promoted.length;
-		numberOfTeams -= numberOfPromoted;
-		for(int i = 0; i < promoted.length; i++){
-			readyToCompareNextYear.set(numberOfTeams, promoted[i]);
-			numberOfTeams++;
-			}
-		return readyToCompareNextYear;
-		
-	}
+
 }

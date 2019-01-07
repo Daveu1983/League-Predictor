@@ -6,29 +6,6 @@ import java.util.stream.Collectors;
 
 public class LeaguePredictor {
 
-    public static ArrayList<Integer> leaguePredicted = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrOneFinishedNextYear = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrTwoFinishedNextYear = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrThreeFinishedNextYear = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrFourFinishedNextYear = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrFiveFinishedNextYear = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrSixFinishedNextYear = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrSevenFinishedNextYear = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrEightFinishedNextYear = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrNineFinishedNextYear = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrTenFinishedNextYear = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrElevenFinishedNextYear = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrTwelveFinishedNextYear = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrThirteenFinishedNextYear = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrFourteenFinishedNextYear = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrFifteenFinishedNextYear = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrSixteenFinishedNextYear = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrSeventeenFinishedNextYear = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrEighteenFinishedNextYear = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrNineteenFinishedNextYear = new ArrayList<>();
-    public static ArrayList<Integer> whereNumbrTwentyFinishedNextYear = new ArrayList<>();
-    public static Map<String, Integer> theLeague = new HashMap();
-
     public static final String CARDIFF_CITY = "Cardiff City";
     public static final String MANCHESTER_UNITED = "Manchester United";
     public static final String ASTON_VILLA = "Aston Villa";

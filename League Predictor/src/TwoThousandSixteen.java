@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class TwoThousandSixteen extends NineteenNinetyThree {
+public class TwoThousandSixteen extends NineteenNinetyFour {
 
     public ArrayList<String> createTable() {
         ArrayList<String> twoThousand16 = new ArrayList<String>();
