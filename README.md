@@ -1,4 +1,8 @@
-# League-Predictor
+#League-Predictor
+
+TODO:-
+- Refactor so leagues are taken as a paramter so any leagues over any period of time can be predicted.
+- Add tests
 
 UPDATE 21/08
 League table now predicted.
