@@ -59,8 +59,7 @@ public class LeaguePredictor {
 
     public static void main(String[] args) {
 
-        Predictor pred = new Predictor();
-        pred.predict();
+        Predictor.predict();
     }
 
 }
