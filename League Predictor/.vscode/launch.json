@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - LeaguePredictor",
+            "request": "launch",
+            "mainClass": "LeaguePredictor.LeaguePredictor",
+            "projectName": "1.0"
+        }
+    ]
+}

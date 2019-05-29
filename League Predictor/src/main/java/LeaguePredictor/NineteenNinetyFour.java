@@ -1,3 +1,5 @@
+package LeaguePredictor;
+
 import java.util.ArrayList;
 public class NineteenNinetyFour extends NineteenNinetyThree {
 	public ArrayList<String> createTable() {
