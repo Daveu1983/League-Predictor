@@ -1,8 +1,6 @@
 package LeaguePredictor;
 
 import java.util.*;
-import java.util.stream.Collectors;
-import static java.util.Collections.reverseOrder;
 
 public class NineteenNinetyThree {
 

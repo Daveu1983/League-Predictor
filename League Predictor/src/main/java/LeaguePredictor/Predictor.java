@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-
 import static java.util.Collections.reverseOrder;
 
 class Predictor {
@@ -30,12 +29,29 @@ class Predictor {
     private static ArrayList<Integer> whereNumbrEighteenFinishedNextYear = new ArrayList<>();
     private static ArrayList<Integer> whereNumbrNineteenFinishedNextYear = new ArrayList<>();
     private static ArrayList<Integer> whereNumbrTwentyFinishedNextYear = new ArrayList<>();
-    private static Map<String, Integer> theLeague = new HashMap();
+    private static Map<String, Integer> theLeague = new HashMap<String, Integer>();
 
     static void predict() {
         compareOneSeasonToTheNextAndStoreDifference();
         getMostCommonNextYearPosition();
         predictLeagueFromCurrentLastTable();
+    }
+
+    static void checkPrediction(){
+        TwoThousandNineteen yearTwentySeven = new TwoThousandNineteen();
+        ArrayList<String> actualTable = yearTwentySeven.createTable();
+        Predicted2018 predicted2018 = new Predicted2018();
+        ArrayList<String> predictedTable = predicted2018.createTable();
+        int k = 0;
+        for(int i = 0; i < predictedTable.size(); i++){
+            k = i+1;
+            if(actualTable.get(i).equals(predictedTable.get(i))){
+                System.out.println("Position " + k + " " + predictedTable.get(i) + " was correct");
+            }else{
+                System.out.println("Position " + k + " was incorrect "+ actualTable.get(i) +
+            " finished here not " + predictedTable.get(i));
+            }
+        }
     }
 
     private static void compareOneSeasonToTheNextAndStoreDifference() {
@@ -82,8 +98,9 @@ class Predictor {
         TwoThousandSixteen yearTwentyFour = new TwoThousandSixteen();
         TwoThousandSeventeen yearTwentyFive = new TwoThousandSeventeen();
         TwoThousandEighteen yearTwentySix = new TwoThousandEighteen();
+        TwoThousandNineteen yearTwentySeven = new TwoThousandNineteen();
 
-        NineteenNinetyThree[] seasons = new NineteenNinetyThree[26];
+        NineteenNinetyThree[] seasons = new NineteenNinetyThree[27];
         seasons[0] = yearOne;
         seasons[1] = yearTwo;
         seasons[2] = yearThree;
@@ -110,6 +127,7 @@ class Predictor {
         seasons[23] = yearTwentyFour;
         seasons[24] = yearTwentyFive;
         seasons[25] = yearTwentySix;
+        seasons[26] = yearTwentySeven;
         return seasons;
     }
    private static void storeDifference(ArrayList<String> previousYear, ArrayList<String> currentYear) {
@@ -245,7 +263,7 @@ class Predictor {
     }
 
     private static void predictLeagueFromCurrentLastTable() {
-        TwoThousandEighteen tableToPredict = new TwoThousandEighteen();
+        TwoThousandNineteen tableToPredict = new TwoThousandNineteen();
         ArrayList<String> lastTable = tableToPredict.createTable();
         String[] lastPromoted = tableToPredict.createPromoted();
         ArrayList<String> lastTableToCompare = tableToPredict.replaceRelegated(lastTable,lastPromoted);

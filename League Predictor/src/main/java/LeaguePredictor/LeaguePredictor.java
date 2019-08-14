@@ -56,6 +56,8 @@ public class LeaguePredictor {
     public static void main(String[] args) {
 
         Predictor.predict();
+        System.out.println("\ncheck 2018 predictions \n");
+        Predictor.checkPrediction();
     }
 
 }
