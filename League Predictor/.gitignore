@@ -1,4 +1,5 @@
 /target
 /.settings
 /.vscode
-/.project
+.project.xml
+.classpath.xml
