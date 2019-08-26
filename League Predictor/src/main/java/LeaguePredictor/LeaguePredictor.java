@@ -1,4 +1,6 @@
 package LeaguePredictor;
+import java.util.List;
+import java.util.Map;
 
 public class LeaguePredictor {
 
@@ -55,7 +57,11 @@ public class LeaguePredictor {
 
     public static void main(String[] args) {
 
-        Predictor.predict();
+        List<Map.Entry<String, Integer>> theLeagueSorted = Predictor.predict();
+        for (Map.Entry<String, Integer> entry : theLeagueSorted) {
+
+            System.out.println(entry);
+        }
         System.out.println("\ncheck 2018 predictions \n");
         Predictor.checkPrediction();
     }

@@ -31,10 +31,12 @@ class Predictor {
     private static ArrayList<Integer> whereNumbrTwentyFinishedNextYear = new ArrayList<>();
     private static Map<String, Integer> theLeague = new HashMap<String, Integer>();
 
-    static void predict() {
+    static List<Map.Entry<String, Integer>> predict() {
         compareOneSeasonToTheNextAndStoreDifference();
         getMostCommonNextYearPosition();
-        predictLeagueFromCurrentLastTable();
+        List<Map.Entry<String, Integer>> theLeagueSorted =  predictLeagueFromCurrentLastTable();
+
+        return theLeagueSorted;
     }
 
     static void checkPrediction(){
@@ -262,7 +264,7 @@ class Predictor {
         return sorted_map;
     }
 
-    private static void predictLeagueFromCurrentLastTable() {
+    private static List<Map.Entry<String, Integer>> predictLeagueFromCurrentLastTable() {
         TwoThousandNineteen tableToPredict = new TwoThousandNineteen();
         ArrayList<String> lastTable = tableToPredict.createTable();
         String[] lastPromoted = tableToPredict.createPromoted();
@@ -280,11 +282,8 @@ class Predictor {
                         .stream()
                         .sorted((Map.Entry.comparingByValue()))
                         .collect(Collectors.toList());
-
-        for (Map.Entry<String, Integer> entry : theLeagueSorted) {
-
-            System.out.println(entry);
-        }
+                        
+        return theLeagueSorted;
     }
 
     private static void wherePosistionFinishedNextYear(List<Map.Entry<Integer, Integer>> wherePositionWillFini) {
